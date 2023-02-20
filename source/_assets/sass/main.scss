@@ -1,0 +1,339 @@
+$blue: #006EB6;
+$blue-card: #0A5891;
+$blue-card-overlay: #006EB6;
+$blue-hover: #003E67;
+$blue-med: #00426D;
+$blue-dark: #022C48;
+$cyan-card: #107E5F;
+$cyan-card-overlay: #009E77;
+$gray: #EDEDED;
+$gray-green: #D3E6E2;
+$green-lighter: #B8D448;
+$green-light: #96C54B;
+$green: #46A557;
+$green-card: #3D6B2A;
+$green-card-overlay: #67B346;
+$green-dark: #00694B;
+$green-darker: #003F2F;
+$green-button: #64B53E;
+$green-lime: #B8DB00;
+$green-lime-light: #BBD163;
+$green-mint: #CCEBE380;
+$green-mint-dark: #D3E6E2;
+$green-text: #005E47;
+$green-yellow: #E3FF6A;
+$white: #FFFFFF;
+$yellow-card: #6F8122;
+$yellow-card-overlay: #9EBA20;
+
+.bg-cyan-card {
+  color: $cyan-card;
+}
+.bg-blue-card {
+  color: $blue-card;
+}
+.bg-yellow-card {
+  color: $yellow-card;
+}
+.bg-cyan-card-overlay {
+  color: $cyan-card-overlay;
+}
+.bg-blue-card-overlay {
+  color: $blue-card-overlay;
+}
+.bg-yellow-card-overlay {
+  color: $yellow-card-overlay;
+}
+.bg-green-card {
+  color: $green-card;
+}
+.bg-green-card-overlay {
+  color: $green-card-overlay;
+}
+.right {
+  justify-content: flex-end;
+}
+label[for=mce-email] {
+  text-align: left;
+}
+
+
+.green-rule {
+  position: relative;
+
+  &::before {
+    content: '';
+    position: absolute;
+    left: -1rem;
+    background-color: $green-lime-light;
+    width: 3rem;
+    height: 3rem;
+  }
+
+  &__hero {
+    @extend .green-rule;
+    &::before {
+      bottom: calc(100% + 2rem) !important;
+    }
+  }
+
+  &__article {
+    @extend .green-rule;
+  }
+
+  &__tabs {
+    @extend .green-rule;
+    &::before {
+      left: -3rem;
+      bottom: calc(100% - 2.5rem);
+    }
+  }
+
+  @media only screen and (min-width: 768px) {
+    &::before {
+      left: 1.5rem;
+      height: 6rem;
+    }
+
+    &__hero {
+      &::before {
+        left: 1rem;
+        bottom: calc(100% - 2.5rem)
+      }
+    }
+
+    &__article {
+      &::before {
+        left: 2rem;
+        bottom: calc(100% - 5rem);
+      }
+    }
+
+    &__tabs {
+      &::before {
+        left: 0;
+      }
+    }
+  }
+
+  @media only screen and (min-width: 1024px) {
+    &::before {
+      height: 6rem;
+    }
+  }
+
+  @media only screen and (min-width: 1280px) {
+    &::before {
+      left: 5.5rem;
+      height: 12rem;
+    }
+
+    &__article {
+      &::before {
+        left: 5.5rem;
+      }
+    }
+  }
+}
+
+body {
+  a {
+    text-decoration: underline;
+    &:hover,
+    &:focus {
+      text-decoration: underline 2px;
+    }
+  }
+}
+
+button {
+  &[role=tab]:not(button[aria-selected=true]) {
+    &:hover,
+    &:focus {
+      background-color: $blue-hover;
+      color: $green-lime;
+    }
+  }
+  &[aria-selected=true] {
+    background-color: $green-button;
+    color: $blue-dark;
+  }
+}
+
+table {
+  border-collapse: collapse;
+
+  tbody {
+    tr:not(:last-child) {
+      th {
+        border: 2px solid $green-button;
+      }
+
+      td {
+        border: 2px solid $green-button;
+      }
+    }
+
+    tr {
+      th {
+        &:first-child {
+          text-align: left;
+        }
+      }
+    }
+  }
+
+  @media only screen and (min-width: 640px) {
+    tr {
+      th {
+        padding: 0.25rem;
+      }
+      td {
+        padding: 0.25rem;
+      }
+    }
+  }
+
+  @media only screen and (max-width: 767px) {
+    thead th[scope="col"]:not(.active),
+    tbody td:not(.active) {
+      display: none;
+    }
+  }
+
+  @media only screen and (min-width: 768px) {
+    tr {
+      th {
+        padding: 0.5rem 1rem;
+      }
+      td {
+        padding: 0.5rem 1rem;
+      }
+    }
+  }
+}
+
+.hero {
+  h1 {
+    transform: translateY(-50%);
+  }
+  &__img {
+    padding-bottom: clamp(215px, 66%, 100vh);
+
+    img {
+      object-position: top center;  
+    }
+  }
+
+  &__subtitles {
+    transform: translateY(1rem);
+  }
+}
+
+.leadership  {
+  .grid {
+    gap: 2rem 0;
+  }
+
+  article {
+    grid-template-rows: 320px 1fr;
+  }
+
+  @media only screen and (min-width: 768px) {
+    & > div > .grid {
+      grid-template-columns: repeat(auto-fit, minmax(205px, 1fr));
+
+      article:not(:first-child) {
+        & > div:last-child {
+          border-left: 1px solid;
+        }
+      }
+    }
+  }
+}
+
+.social-link {
+  header & {
+    fill: $blue;
+  }
+
+  footer & {
+    fill: $white;
+  }
+}
+
+.supporters {
+  button {
+    color: $green-darker;
+
+    &[role=tab]:not(button[aria-selected=true]) {
+      &:hover,
+      &:focus {
+        background-color: $gray-green;
+        color: $green-darker;
+      }
+    }
+    
+    &[aria-selected=true] {
+      background-color: $green-darker;
+      color: $white;
+    }
+  }
+}
+
+.investment-goal {
+  @media only screen and (min-width: 640px) {
+    & > div > .grid {
+      grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+      grid-gap: 1rem;
+    }
+  }
+
+  @media only screen and (min-width: 1024px) {
+    & > div > .grid {
+      grid-template-columns: repeat(auto-fit, minmax(210px, 1fr));
+    }
+  }
+}
+
+.goal {
+  font-size: clamp(4.5rem, 24vw, 6rem);
+  line-height: 1;
+}
+
+.card {
+  &__body {
+    img {
+      object-position: top center;
+
+    }
+
+    &::before,
+    &::after {
+      content: '';
+      position: absolute;
+      width: 100%;
+      height: 100%;
+    }
+
+    &::before {
+      background-color: #000;
+      opacity: 0.5;
+      z-index: 9;
+    }
+
+    &::after {
+      content: '';
+      background-color: inherit;
+      mix-blend-mode: overlay;
+    }
+  }
+
+  @media only screen and (min-width: 1024px) {
+    &:nth-child(even) {
+      .card__body {
+        transform: translateY(4rem);
+      }
+    }
+  }
+}

@@ -10,6 +10,7 @@ mix.jigsaw()
         require('postcss-import'),
         require('tailwindcss'),
     ])
+    .sass('source/_assets/sass/main.scss', 'css/main.css')
     .options({
         processCssUrls: false,
     })
