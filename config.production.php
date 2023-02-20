@@ -2,5 +2,5 @@
 
 return [
     'production' => true,
-    'baseUrl' => 'https://www.liifund.org/impact-report-2022',
+    'baseUrl' => 'https://musical-centaur-ea21c5.netlify.app/',
 ];
