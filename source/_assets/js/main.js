@@ -1,5 +1,5 @@
 // import CountUp from 'countUp.js';
-// import sal from 'sal.js'
+import sal from 'sal.js'
 import initTabs from './util/initTabs';
 
 window.addEventListener('DOMContentLoaded', () => {
@@ -71,9 +71,9 @@ window.addEventListener('DOMContentLoaded', () => {
   /**
    * Initialize sal
    */
-  // sal({
-  //   selector: '.animate',
-  // });
+  sal({
+    selector: '.animate',
+  });
 
   /**
    * Initialize countUp
@@ -91,18 +91,18 @@ window.addEventListener('DOMContentLoaded', () => {
   /**
    * Intersection Observer
    */
-  // const accentObserver = new IntersectionObserver((entries) => {
-  //   entries.forEach(entry => {
-  //     if (entry.isIntersecting) {
-  //       entry.target.classList.add('in-viewport');
-  //       accentObserver.unobserve(entry.target);
-  //     }
-  //   });
-  // });
+  const accentObserver = new IntersectionObserver((entries) => {
+    entries.forEach(entry => {
+      if (entry.isIntersecting) {
+        entry.target.classList.add('in-viewport');
+        accentObserver.unobserve(entry.target);
+      }
+    });
+  });
 
-  // const animateEls = document.querySelectorAll('.progress-bar__overlay, .green-rule, .green-rule__hero, .green-rule__article, .green-rule__tabs');
-  // animateEls.forEach(el => {
-  //   accentObserver.observe(el);
-  // });
+  const animateEls = document.querySelectorAll('.progress-bar__overlay, .green-rule, .green-rule__hero, .green-rule__article, .green-rule__tabs');
+  animateEls.forEach(el => {
+    accentObserver.observe(el);
+  });
 
 });
