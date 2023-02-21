@@ -1,0 +1,14 @@
+button {
+  &[role=tab]:not(button[aria-selected=true]) {
+    &:hover,
+    &:focus {
+      background-color: $blue-hover;
+      color: $green-lime;
+      text-decoration: underline;
+    }
+  }
+  &[aria-selected=true] {
+    background-color: $green-button;
+    color: $blue-dark;
+  }
+}

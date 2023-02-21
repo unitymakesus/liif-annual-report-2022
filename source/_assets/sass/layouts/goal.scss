@@ -1,0 +1,87 @@
+.progress-bar {
+  background-color: $blue;
+
+  &__overlay {
+    background-color: $blue-dark;
+
+    &.in-viewport {
+      width: 26%;
+      animation-name: shorten;
+      animation-duration: 1.5s;
+      animation-iteration-count: 1;
+    }
+  
+    @keyframes shorten {
+      from {width: 0;}
+      to {width: 26%;}
+    }
+  }
+}
+
+.investment-goal {
+  @media only screen and (min-width: 540px) {
+    & > div > .grid {
+      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+      grid-gap: 1rem;
+    }
+  }
+
+  @media only screen and (min-width: 640px) {
+    & > div > .grid {
+      grid-template-columns: repeat(auto-fit, minmax(270px, 1fr));
+    }
+  }
+
+  @media only screen and (min-width: 768px) {
+    & > div > .grid {
+      grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+    }
+  }
+
+  @media only screen and (min-width: 1024px) {
+    & > div > .grid {
+      grid-template-columns: repeat(auto-fit, minmax(205px, 1fr));
+    }
+
+    .goal {
+      font-size: clamp(3.5rem, 6vw, 6rem);
+    }
+  }
+}
+
+.goal {
+  font-size: clamp(3.5rem, 18vw, 6rem);
+  line-height: 1;
+
+  .prefix {
+    padding-top: 0.25em;
+    font-size: 0.5em;
+  }
+
+  .unit {
+    align-self: flex-end;
+    padding-bottom: 1.5%;
+    font-size: 0.75em;
+  }
+
+  &.goal-total {
+    font-size: clamp(4.5rem, 18vw, 8rem);
+  }
+}
+
+.card {
+  &__body {
+    img {
+      object-position: top center;
+      mix-blend-mode: multiply;
+    }
+  }
+
+  @media only screen and (min-width: 1024px) {
+    &:nth-child(even) {
+      .card__body {
+        margin-top: 4rem;
+      }
+    }
+  }
+}

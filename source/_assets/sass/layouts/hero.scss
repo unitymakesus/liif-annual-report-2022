@@ -1,0 +1,22 @@
+.hero {
+  h1 {
+    transform: translateY(-50%);
+  }
+
+  &__img {
+    background-color: #EDEDED;
+    padding-bottom: clamp(280px, 80%, 1000px);
+
+    img {
+      object-position: top center;  
+    }
+  }
+
+  &__bg-img {
+    mix-blend-mode: multiply;
+  }
+
+  &__subtitles {
+    transform: translateY(1rem);
+  }
+}

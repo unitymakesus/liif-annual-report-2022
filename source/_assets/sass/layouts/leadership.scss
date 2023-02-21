@@ -1,0 +1,47 @@
+.leadership  {
+  .grid {
+    gap: 2rem;
+  }
+
+  article {
+    grid-template-rows: auto 1fr;
+
+    & > div:first-child {
+      padding-bottom: clamp(275px, 80%, 325px);
+    }
+
+    &:first-child {
+      img {
+        object-fit: cover;
+      }
+    }
+
+    &:not(:first-child) {
+      img {
+        object-fit: contain;
+      }
+    }
+  }
+
+  @media only screen and (min-width: 824px) {
+    & > div > .grid {
+      grid-template-columns: repeat(auto-fit, minmax(205px, 1fr));
+
+      .leader:not(:first-child) {
+        .leader__bio {
+          position: relative;
+
+          &::before {
+            content: '';
+            height: 100%;
+            width: 1px;
+            position: absolute;
+            top: 0;
+            left: -1rem;
+            background: #000;
+          }
+        }
+      }
+    }
+  }
+}

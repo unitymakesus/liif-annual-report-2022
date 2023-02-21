@@ -1,11 +1,11 @@
 <h3>Financial Position</h3>
 <p>As of June 30</p>
-<nav class="table-years mb-4" data-tables="financial-position">
+<nav class="table-years mb-4 md:hidden" data-tables="financial-position">
   <button data-col="1" class="active">2021</button>
   <button data-col="2">2020</button>
   <button data-col="3">2019</button>
 </nav>
-<table class="mb-8 financial-position w-full">
+<table class="my-8 financial-position w-full">
   <caption class="sr-only">LIIF assets for 2022 (as of June 30th), 2021, and 2020.</caption>
   <thead>
     <tr class="font-bold">

@@ -1,0 +1,18 @@
+.supporters {
+  button {
+    color: $green-darker;
+
+    &[role=tab]:not(button[aria-selected=true]) {
+      &:hover,
+      &:focus {
+        background-color: $gray-green;
+        color: $green-darker;
+      }
+    }
+    
+    &[aria-selected=true] {
+      background-color: $green-darker;
+      color: $white;
+    }
+  }
+}
