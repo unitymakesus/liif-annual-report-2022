@@ -432,20 +432,20 @@ body a:hover, body a:focus {
     display: none;
   }
 }
-.social-link:hover {
+.social-link:hover, .social-link:focus {
   box-shadow: 0px 3px 5px rgba(0, 0, 0, 0.4117647059);
   transition: all 0.25s ease-in-out;
 }
 header .social-link {
   fill: #006EB6;
 }
-header .social-link:hover {
+header .social-link:hover, header .social-link:focus {
   fill: #46A557;
 }
 footer .social-link {
   fill: #FFFFFF;
 }
-footer .social-link:hover {
+footer .social-link:hover, footer .social-link:focus {
   fill: #B8DB00;
 }
 
@@ -1248,9 +1248,6 @@ video {
 .pb-16 {
   padding-bottom: 4rem;
 }
-.pb-4 {
-  padding-bottom: 1rem;
-}
 .pb-8 {
   padding-bottom: 2rem;
 }
@@ -1274,6 +1271,9 @@ video {
 }
 .pt-4 {
   padding-top: 1rem;
+}
+.pb-4 {
+  padding-bottom: 1rem;
 }
 .text-center {
   text-align: center;
@@ -1399,6 +1399,10 @@ video {
   color: rgb(255 255 255 / var(--tw-text-opacity));
 }
 @media (min-width: 640px) {
+
+  .sm\:-bottom-3 {
+    bottom: -0.75rem;
+  }
 
   .sm\:mr-4 {
     margin-right: 1rem;
@@ -1531,13 +1535,14 @@ video {
     flex-direction: row;
   }
 
+  .md\:py-12 {
+    padding-top: 3rem;
+    padding-bottom: 3rem;
+  }
+
   .md\:py-4 {
     padding-top: 1rem;
     padding-bottom: 1rem;
-  }
-
-  .md\:pb-12 {
-    padding-bottom: 3rem;
   }
 
   .md\:pb-32 {
@@ -1546,6 +1551,10 @@ video {
 
   .md\:pl-16 {
     padding-left: 4rem;
+  }
+
+  .md\:pb-12 {
+    padding-bottom: 3rem;
   }
 
   .md\:pt-12 {
@@ -1566,6 +1575,10 @@ video {
 
   .lg\:absolute {
     position: absolute;
+  }
+
+  .lg\:-bottom-6 {
+    bottom: -1.5rem;
   }
 
   .lg\:mt-8 {

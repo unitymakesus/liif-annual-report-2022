@@ -35,7 +35,8 @@ body {
 .social-link {
   // transition: all 0.25s;
 
-  &:hover {
+  &:hover,
+  &:focus {
     box-shadow: 0px 3px 5px #00000069;
     transition: all 0.25s ease-in-out;
   }
@@ -43,7 +44,8 @@ body {
   header & {
     fill: $blue;
 
-    &:hover {
+    &:hover,
+    &:focus {
       fill: $green;
     }
   }
@@ -51,7 +53,8 @@ body {
   footer & {
     fill: $white;
 
-    &:hover {
+    &:hover,
+    &:focus {
       fill: $green-lime;
     }
   }
