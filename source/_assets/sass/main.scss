@@ -2,6 +2,8 @@
 @import 'sal.js/dist/sal.css';
 
 // Theme styles
+@import 'base/a11y';
+@import 'base/animation';
 @import 'base/colors';
 @import 'base/type';
 @import 'components/article';
@@ -31,12 +33,27 @@ body {
 }
 
 .social-link {
+  // transition: all 0.25s;
+
+  &:hover {
+    box-shadow: 0px 3px 5px #00000069;
+    transition: all 0.25s ease-in-out;
+  }
+
   header & {
     fill: $blue;
+
+    &:hover {
+      fill: $green;
+    }
   }
 
   footer & {
     fill: $white;
+
+    &:hover {
+      fill: $green-lime;
+    }
   }
 }
 

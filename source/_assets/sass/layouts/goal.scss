@@ -6,14 +6,9 @@
 
     &.in-viewport {
       width: 26%;
-      animation-name: shorten;
+      animation-name: extend;
       animation-duration: 1.5s;
       animation-iteration-count: 1;
-    }
-  
-    @keyframes shorten {
-      from {width: 0;}
-      to {width: 26%;}
     }
   }
 }

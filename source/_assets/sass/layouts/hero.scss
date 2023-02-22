@@ -17,6 +17,11 @@
   }
 
   &__subtitles {
-    transform: translateY(1rem);
+    transform: translateY(2rem);
+
+    &.in-viewport {
+      animation: fadeInUpHero;
+      animation-duration: .5s;
+    }
   }
 }

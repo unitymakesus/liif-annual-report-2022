@@ -1,6 +1,10 @@
+import 'focus-visible';
+import 'lazysizes';
 import counterUp from 'counterup2';
 import sal from 'sal.js'
 import initTabs from './util/initTabs';
+import prefersReducedMotion from './util/prefersReducedMotion';
+
 
 window.addEventListener('DOMContentLoaded', () => {
   /**
@@ -68,45 +72,44 @@ window.addEventListener('DOMContentLoaded', () => {
     });
   }
 
-  /**
-   * Initialize sal
-   */
-  sal({
-    selector: '.animate',
-  });
 
-
-
-  /**
-   * Intersection Observer
-   */
-  
-
-  const accentObserver = new IntersectionObserver((entries) => {
-    entries.forEach(entry => {
-      if (entry.isIntersecting) {
-        entry.target.classList.add('in-viewport');
-        accentObserver.unobserve(entry.target);
-
-        console.log(entry);
-        
-        if (entry.target.classList.contains('progress')) {
-          const el = document.querySelector( '.progress' )
-
-          // Start counting, do this on DOM ready or with Waypoints.
-          counterUp( el, {
-            duration: 1000,
-            delay: 16,
-          } )
-        };
-
-      }
+    /**
+     * Initialize sal
+     */
+    sal({
+      disabled: prefersReducedMotion(),
+      selector: '.animate',
     });
-  });
 
-  const animateEls = document.querySelectorAll('.progress-bar__overlay, .green-rule, .green-rule__hero, .green-rule__article, .green-rule__tabs, .progress');
-  animateEls.forEach(el => {
-    accentObserver.observe(el);
-  });
+    /**
+     * Intersection Observer
+     */
+    if (!prefersReducedMotion()) {
+      const accentObserver = new IntersectionObserver((entries) => {
+        entries.forEach(entry => {
+          if (entry.isIntersecting) {
+            entry.target.classList.add('in-viewport');
+            accentObserver.unobserve(entry.target);
 
+            console.log(entry);
+            
+            if (entry.target.classList.contains('progress')) {
+              const el = document.querySelector( '.progress' )
+
+              // Start counting, do this on DOM ready or with Waypoints.
+              counterUp( el, {
+                duration: 1000,
+                delay: 16,
+              } )
+            };
+
+          }
+        });
+      });
+
+      const animateEls = document.querySelectorAll('.progress-bar__overlay, .hero__subtitles, .green-rule, .green-rule__hero, .green-rule__article, .green-rule__tabs, .progress');
+      animateEls.forEach(el => {
+        accentObserver.observe(el);
+      });
+    }
 });

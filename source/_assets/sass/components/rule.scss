@@ -8,8 +8,6 @@
     background-color: $green-lime-light;
     width: 3rem;
     height: 10rem;
-    opacity: 0;
-    transform: translateY(1rem);
     transition: opacity .5s, transform .5s;
   }
 
@@ -17,8 +15,8 @@
     @extend .green-rule;
     &::before {
       left: -2rem;
-      height: 3rem;
-      bottom: calc(100% + 3rem);
+      height: 52px;
+      bottom: calc(100% + 1rem);
     }
   }
 
@@ -39,8 +37,8 @@
 
   &.in-viewport {
     &::before {
-      opacity: 1;
-      transform: translateY(0);
+      animation: fadeInUp;
+      animation-duration: .5s;
     }
   }
 
@@ -49,7 +47,7 @@
     &__hero {
       &::before {
         left: -2rem;
-        bottom: calc(100% + 4.5rem);
+        bottom: calc(100% + 3rem);
       }
     }
   }
@@ -64,7 +62,7 @@
       &::before {
         height: 6rem;
         left: 0;
-        bottom: calc(100% + 4rem)
+        bottom: calc(100% + 2.9rem)
       }
     }
 
@@ -78,6 +76,15 @@
     &__tabs {
       &::before {
         left: 0;
+      }
+    }
+  }
+
+  // Desktop
+  @media only screen and (min-width: 1024px) {
+    &__hero {
+      &::before {
+        height: 10rem;
       }
     }
   }

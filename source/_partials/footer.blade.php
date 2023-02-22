@@ -1,7 +1,7 @@
 <footer class="footer bg-blue-med">
   <div class="flex flex-col items-center md:flex-row justify-between max-w-6xl mx-auto text-center py-12 px-8">
     <div class="lg:min-w-fit">
-      <a class="inline-block" href="https://www.liifund.org/">
+      <a class="logo logo-footer inline-block" href="https://www.liifund.org/">
         <img class="lazyload lg:w-[150px]" src="{{ url('/assets/images/logo.svg') }}" alt="Low Income Investment Fund" width="100" />
       </a>
     </div>

@@ -7,5 +7,6 @@
             @yield('body')
         </main>
         @include('_partials.footer')
+        <script src="/node_modules/focus-visible/dist/focus-visible.min.js"></script>
     </body>
 </html>
