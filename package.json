@@ -16,6 +16,7 @@
         "tailwindcss": "^3.1.6"
     },
     "dependencies": {
+        "counterup2": "^2.0.2",
         "countup.js": "^2.4.2",
         "sal.js": "^0.8.5"
     }

@@ -1,4 +1,4 @@
-import { CountUp } from 'countUp.js';
+import counterUp from 'counterup2';
 import sal from 'sal.js'
 import initTabs from './util/initTabs';
 
@@ -75,32 +75,36 @@ window.addEventListener('DOMContentLoaded', () => {
     selector: '.animate',
   });
 
-  /**
-   * Initialize countUp
-   */
-    let options = {
-      enableScrollSpy: true,
-      scrollSpyOnce: true,
-    };
-    let progBarOverlay = document.querySelector('.progress-bar__overlay')
-    let progBar = new CountUp('progress', 26, options);
-    
-    
 
 
   /**
    * Intersection Observer
    */
+  
+
   const accentObserver = new IntersectionObserver((entries) => {
     entries.forEach(entry => {
       if (entry.isIntersecting) {
         entry.target.classList.add('in-viewport');
         accentObserver.unobserve(entry.target);
+
+        console.log(entry);
+        
+        if (entry.target.classList.contains('progress')) {
+          const el = document.querySelector( '.progress' )
+
+          // Start counting, do this on DOM ready or with Waypoints.
+          counterUp( el, {
+            duration: 1000,
+            delay: 16,
+          } )
+        };
+
       }
     });
   });
 
-  const animateEls = document.querySelectorAll('.progress-bar__overlay, .green-rule, .green-rule__hero, .green-rule__article, .green-rule__tabs');
+  const animateEls = document.querySelectorAll('.progress-bar__overlay, .green-rule, .green-rule__hero, .green-rule__article, .green-rule__tabs, .progress');
   animateEls.forEach(el => {
     accentObserver.observe(el);
   });

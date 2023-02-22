@@ -42,7 +42,7 @@
             {{-- Progress Bar --}}
             <div class="progress-bar flex text-white relative overflow-hidden">
                 <span class="text-xl inline-block h-full font-medium pl-4 py-1 z-10">
-                    <span id="progress">26</span>%
+                    <span class="progress">26</span>%
                 </span>
                 <span class="progress-bar__overlay h-full absolute top-0 left-0"></span>
             </div>

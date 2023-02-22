@@ -9,7 +9,7 @@
 
 "use strict";
 __webpack_require__.r(__webpack_exports__);
-/* harmony import */ var countUp_js__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! countUp.js */ "./node_modules/countUp.js/dist/countUp.min.js");
+/* harmony import */ var counterup2__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! counterup2 */ "./node_modules/counterup2/index.js");
 /* harmony import */ var sal_js__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! sal.js */ "./node_modules/sal.js/dist/sal.js");
 /* harmony import */ var sal_js__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(sal_js__WEBPACK_IMPORTED_MODULE_1__);
 /* harmony import */ var _util_initTabs__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./util/initTabs */ "./source/_assets/js/util/initTabs.js");
@@ -87,27 +87,29 @@ window.addEventListener('DOMContentLoaded', function () {
   });
 
   /**
-   * Initialize countUp
-   */
-  var options = {
-    enableScrollSpy: true,
-    scrollSpyOnce: true
-  };
-  var progBarOverlay = document.querySelector('.progress-bar__overlay');
-  var progBar = new countUp_js__WEBPACK_IMPORTED_MODULE_0__.CountUp('progress', 26, options);
-
-  /**
    * Intersection Observer
    */
+
   var accentObserver = new IntersectionObserver(function (entries) {
     entries.forEach(function (entry) {
       if (entry.isIntersecting) {
         entry.target.classList.add('in-viewport');
         accentObserver.unobserve(entry.target);
+        console.log(entry);
+        if (entry.target.classList.contains('progress')) {
+          var el = document.querySelector('.progress');
+
+          // Start counting, do this on DOM ready or with Waypoints.
+          (0,counterup2__WEBPACK_IMPORTED_MODULE_0__["default"])(el, {
+            duration: 1000,
+            delay: 16
+          });
+        }
+        ;
       }
     });
   });
-  var animateEls = document.querySelectorAll('.progress-bar__overlay, .green-rule, .green-rule__hero, .green-rule__article, .green-rule__tabs');
+  var animateEls = document.querySelectorAll('.progress-bar__overlay, .green-rule, .green-rule__hero, .green-rule__article, .green-rule__tabs, .progress');
   animateEls.forEach(function (el) {
     accentObserver.observe(el);
   });
@@ -363,18 +365,141 @@ function initTabs(tablist) {
 
 /***/ }),
 
-/***/ "./node_modules/countUp.js/dist/countUp.min.js":
-/*!*****************************************************!*\
-  !*** ./node_modules/countUp.js/dist/countUp.min.js ***!
-  \*****************************************************/
+/***/ "./node_modules/counterup2/index.js":
+/*!******************************************!*\
+  !*** ./node_modules/counterup2/index.js ***!
+  \******************************************/
 /***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
 
 "use strict";
 __webpack_require__.r(__webpack_exports__);
 /* harmony export */ __webpack_require__.d(__webpack_exports__, {
-/* harmony export */   "CountUp": () => (/* binding */ CountUp)
+/* harmony export */   "counterUp": () => (/* binding */ counterUp),
+/* harmony export */   "default": () => (__WEBPACK_DEFAULT_EXPORT__),
+/* harmony export */   "divideNumbers": () => (/* binding */ divideNumbers)
 /* harmony export */ });
-var __assign=undefined&&undefined.__assign||function(){return(__assign=Object.assign||function(t){for(var i,n=1,s=arguments.length;n<s;n++)for(var a in i=arguments[n])Object.prototype.hasOwnProperty.call(i,a)&&(t[a]=i[a]);return t}).apply(this,arguments)},CountUp=function(){function t(t,i,n){var s=this;this.endVal=i,this.options=n,this.version="2.4.2",this.defaults={startVal:0,decimalPlaces:0,duration:2,useEasing:!0,useGrouping:!0,useIndianSeparators:!1,smartEasingThreshold:999,smartEasingAmount:333,separator:",",decimal:".",prefix:"",suffix:"",enableScrollSpy:!1,scrollSpyDelay:200,scrollSpyOnce:!1},this.finalEndVal=null,this.useEasing=!0,this.countDown=!1,this.error="",this.startVal=0,this.paused=!0,this.once=!1,this.count=function(t){s.startTime||(s.startTime=t);var i=t-s.startTime;s.remaining=s.duration-i,s.useEasing?s.countDown?s.frameVal=s.startVal-s.easingFn(i,0,s.startVal-s.endVal,s.duration):s.frameVal=s.easingFn(i,s.startVal,s.endVal-s.startVal,s.duration):s.frameVal=s.startVal+(s.endVal-s.startVal)*(i/s.duration);var n=s.countDown?s.frameVal<s.endVal:s.frameVal>s.endVal;s.frameVal=n?s.endVal:s.frameVal,s.frameVal=Number(s.frameVal.toFixed(s.options.decimalPlaces)),s.printValue(s.frameVal),i<s.duration?s.rAF=requestAnimationFrame(s.count):null!==s.finalEndVal?s.update(s.finalEndVal):s.callback&&s.callback()},this.formatNumber=function(t){var i,n,a,e,r=t<0?"-":"";i=Math.abs(t).toFixed(s.options.decimalPlaces);var o=(i+="").split(".");if(n=o[0],a=o.length>1?s.options.decimal+o[1]:"",s.options.useGrouping){e="";for(var l=3,h=0,u=0,p=n.length;u<p;++u)s.options.useIndianSeparators&&4===u&&(l=2,h=1),0!==u&&h%l==0&&(e=s.options.separator+e),h++,e=n[p-u-1]+e;n=e}return s.options.numerals&&s.options.numerals.length&&(n=n.replace(/[0-9]/g,function(t){return s.options.numerals[+t]}),a=a.replace(/[0-9]/g,function(t){return s.options.numerals[+t]})),r+s.options.prefix+n+a+s.options.suffix},this.easeOutExpo=function(t,i,n,s){return n*(1-Math.pow(2,-10*t/s))*1024/1023+i},this.options=__assign(__assign({},this.defaults),n),this.formattingFn=this.options.formattingFn?this.options.formattingFn:this.formatNumber,this.easingFn=this.options.easingFn?this.options.easingFn:this.easeOutExpo,this.startVal=this.validateValue(this.options.startVal),this.frameVal=this.startVal,this.endVal=this.validateValue(i),this.options.decimalPlaces=Math.max(this.options.decimalPlaces),this.resetDuration(),this.options.separator=String(this.options.separator),this.useEasing=this.options.useEasing,""===this.options.separator&&(this.options.useGrouping=!1),this.el="string"==typeof t?document.getElementById(t):t,this.el?this.printValue(this.startVal):this.error="[CountUp] target is null or undefined","undefined"!=typeof window&&this.options.enableScrollSpy&&(this.error?console.error(this.error,t):(window.onScrollFns=window.onScrollFns||[],window.onScrollFns.push(function(){return s.handleScroll(s)}),window.onscroll=function(){window.onScrollFns.forEach(function(t){return t()})},this.handleScroll(this)))}return t.prototype.handleScroll=function(t){if(t&&window&&!t.once){var i=window.innerHeight+window.scrollY,n=t.el.getBoundingClientRect(),s=n.top+window.pageYOffset,a=n.top+n.height+window.pageYOffset;a<i&&a>window.scrollY&&t.paused?(t.paused=!1,setTimeout(function(){return t.start()},t.options.scrollSpyDelay),t.options.scrollSpyOnce&&(t.once=!0)):(window.scrollY>a||s>i)&&!t.paused&&t.reset()}},t.prototype.determineDirectionAndSmartEasing=function(){var t=this.finalEndVal?this.finalEndVal:this.endVal;this.countDown=this.startVal>t;var i=t-this.startVal;if(Math.abs(i)>this.options.smartEasingThreshold&&this.options.useEasing){this.finalEndVal=t;var n=this.countDown?1:-1;this.endVal=t+n*this.options.smartEasingAmount,this.duration=this.duration/2}else this.endVal=t,this.finalEndVal=null;null!==this.finalEndVal?this.useEasing=!1:this.useEasing=this.options.useEasing},t.prototype.start=function(t){this.error||(this.callback=t,this.duration>0?(this.determineDirectionAndSmartEasing(),this.paused=!1,this.rAF=requestAnimationFrame(this.count)):this.printValue(this.endVal))},t.prototype.pauseResume=function(){this.paused?(this.startTime=null,this.duration=this.remaining,this.startVal=this.frameVal,this.determineDirectionAndSmartEasing(),this.rAF=requestAnimationFrame(this.count)):cancelAnimationFrame(this.rAF),this.paused=!this.paused},t.prototype.reset=function(){cancelAnimationFrame(this.rAF),this.paused=!0,this.resetDuration(),this.startVal=this.validateValue(this.options.startVal),this.frameVal=this.startVal,this.printValue(this.startVal)},t.prototype.update=function(t){cancelAnimationFrame(this.rAF),this.startTime=null,this.endVal=this.validateValue(t),this.endVal!==this.frameVal&&(this.startVal=this.frameVal,null==this.finalEndVal&&this.resetDuration(),this.finalEndVal=null,this.determineDirectionAndSmartEasing(),this.rAF=requestAnimationFrame(this.count))},t.prototype.printValue=function(t){var i=this.formattingFn(t);this.el&&("INPUT"===this.el.tagName?this.el.value=i:"text"===this.el.tagName||"tspan"===this.el.tagName?this.el.textContent=i:this.el.innerHTML=i)},t.prototype.ensureNumber=function(t){return"number"==typeof t&&!isNaN(t)},t.prototype.validateValue=function(t){var i=Number(t);return this.ensureNumber(i)?i:(this.error="[CountUp] invalid start or end value: ".concat(t),null)},t.prototype.resetDuration=function(){this.startTime=null,this.duration=1e3*Number(this.options.duration),this.remaining=this.duration},t}();
+const counterUp = ( el, options = {} ) => {
+	const {
+		action = 'start',
+		duration = 1000,
+		delay = 16,
+	} = options
+
+	// Allow people to use this as a stop method.
+	if ( action === 'stop' ) {
+		stopCountUp( el )
+		return
+	}
+
+	stopCountUp( el )
+
+	// If no number, don't do anything.
+	if ( ! /[0-9]/.test( el.innerHTML ) ) {
+		return
+	}
+
+	const nums = divideNumbers( el.innerHTML, {
+		duration: duration || el.getAttribute( 'data-duration' ),
+		delay: delay || el.getAttribute( 'data-delay' ),
+	} )
+
+	// Remember the contents.
+	el._countUpOrigInnerHTML = el.innerHTML
+
+	// Start counting.
+	el.innerHTML = nums[ 0 ] || '&nbsp;' // Use a non-breaking space to prevent layout shift.
+	el.style.visibility = 'visible'
+
+	// Function for displaying output with the set time and delay.
+	const output = function() {
+		el.innerHTML = nums.shift() || '&nbsp;' // Use a non-breaking space to prevent layout shift.
+		if ( nums.length ) {
+			clearTimeout( el.countUpTimeout )
+			el.countUpTimeout = setTimeout( output, delay )
+		} else {
+			el._countUpOrigInnerHTML = undefined
+		}
+	}
+	el.countUpTimeout = setTimeout( output, delay )
+}
+
+/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (counterUp);
+
+const stopCountUp = el => {
+	clearTimeout( el.countUpTimeout )
+	if ( el._countUpOrigInnerHTML ) {
+		el.innerHTML = el._countUpOrigInnerHTML
+		el._countUpOrigInnerHTML = undefined
+	}
+	el.style.visibility = ''
+}
+
+const divideNumbers = ( numToDivide, options = {} ) => {
+	const {
+		duration = 1000,
+		delay = 16,
+	} = options
+
+	// Number of times the number will change.
+	const divisions = duration / delay
+
+	// Split numbers and html tags.
+	const splitValues = numToDivide.toString().split( /(<[^>]+>|[0-9.][,.0-9]*[0-9]*)/ )
+
+	// Contains all numbers to be displayed.
+	const nums = []
+
+	// Set blank strings to ready the split values.
+	for ( let k = 0; k < divisions; k++ ) {
+		nums.push( '' )
+	}
+
+	// Loop through all numbers and html tags.
+	for ( let i = 0; i < splitValues.length; i++ ) {
+		// If number split it into smaller numbers and insert it to nums.
+		if ( /([0-9.][,.0-9]*[0-9]*)/.test( splitValues[ i ] ) && ! /<[^>]+>/.test( splitValues[ i ] ) ) {
+			let num = splitValues[ i ]
+
+			// Find all the occurances of . and ,
+			const symbols = [ ...num.matchAll( /[.,]/g ) ]
+				// Get all the locations of the characters so we can re-place them later on.
+				.map( m => ( { char: m[0], i: num.length - m.index - 1 } ) )
+				// Make sure we go through the characters from right to left
+				.sort( ( a, b ) => a.i - b.i )
+
+			// Remove commas and dots for computation purposes.
+			num = num.replace( /[.,]/g, '' )
+
+			// Start adding numbers from the end.
+			let k = nums.length - 1
+
+			// Create small numbers we'll the count over.
+			for ( let val = divisions; val >= 1; val-- ) {
+				let newNum = parseInt( num / divisions * val, 10 )
+
+				// Re-insert the symbols in the indices they were at.
+				newNum = symbols.reduce( ( num, { char, i } ) => {
+					return num.length <= i ? num // If we don't have enough numbers, don't insert the symbol.
+						: num.slice( 0, -i ) + char + num.slice( -i )
+				}, newNum.toString() )
+
+				// Insert all small numbers.
+				nums[ k-- ] += newNum
+			}
+		} else {
+			// Insert all non-numbers in the same place.
+			for ( let k = 0; k < divisions; k++ ) {
+				nums[ k ] += splitValues[ i ]
+			}
+		}
+	}
+
+	// The last value of the element should be the original one.
+	nums[ nums.length ] = numToDivide.toString()
+
+	return nums
+}
+
 
 /***/ }),
 
