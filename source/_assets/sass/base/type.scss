@@ -1,3 +1,6 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap');
+
+
 h2 {
   @media only screen and (max-width: 640px) {
     font-size: clamp(1.5rem, 6vw, 1.75rem) !important;
@@ -8,4 +11,8 @@ h2 {
       font-size: clamp(1.75rem, 6vw, 2rem) !important;
     }
   }
+}
+
+body {
+  font-family: 'Inter', sans-serif;
 }
