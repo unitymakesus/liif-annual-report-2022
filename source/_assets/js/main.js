@@ -1,4 +1,4 @@
-// import CountUp from 'countUp.js';
+import { CountUp } from 'countUp.js';
 import sal from 'sal.js'
 import initTabs from './util/initTabs';
 
@@ -78,12 +78,12 @@ window.addEventListener('DOMContentLoaded', () => {
   /**
    * Initialize countUp
    */
-    // let options = {
-    //   enableScrollSpy: true,
-    //   scrollSpyOnce: true,
-    // };
-    // let progBarOverlay = document.querySelector('.progress-bar__overlay')
-    // let progBar = new CountUp('progress', 26, options);
+    let options = {
+      enableScrollSpy: true,
+      scrollSpyOnce: true,
+    };
+    let progBarOverlay = document.querySelector('.progress-bar__overlay')
+    let progBar = new CountUp('progress', 26, options);
     
     
 
