@@ -2,5 +2,5 @@
 
 return [
     'production' => true,
-    'baseUrl' => 'https://musical-centaur-ea21c5.netlify.app/',
+    'baseUrl' => 'https://liif-annual-report-2022.netlify.app/',
 ];
