@@ -1,9 +1,9 @@
 <h3>Financial Activities</h3>
 <p>As of June 30</p>
-<nav class="table-years mb-4 md:hidden" data-tables="financial-activities">
-  <button data-col="1" class="active">2022</button>
-  <button data-col="2">2021</button>
-  <button data-col="3">2020</button>
+<nav class="table-years mb-4 md:hidden w-full grid grid-cols-3 py-8 mt-4" data-tables="financial-activities">
+  <button data-col="1" class="active text-2xl">2022</button>
+  <button data-col="2" class="text-2xl" >2021</button>
+  <button data-col="3" class="text-2xl" >2020</button>
 </nav>
 <table class="my-8 financial-activities w-full">
   <caption class="sr-only">LIIF revenue for 2022 (as of June 30th), 2021, and 2020.</caption>
@@ -41,10 +41,10 @@
       <td>$2,273,978</td>
     </tr>
     <tr class="font-bold">
-      <th scope="row">Total Revenue</th>
-      <td class="active">$58,070,096</td>
-      <td>$81,745,363</td>
-      <td>$49,168,762</td>
+      <th scope="row" class="align-top">Total Revenue</th>
+      <td class="active align-top">$58,070,096</td>
+      <td class="align-top">$81,745,363</td>
+      <td class="align-top">$49,168,762</td>
     </tr>
   </tbody>
 </table>
@@ -91,10 +91,10 @@
       <td>$10,954,744 </td>
     </tr>
     <tr class="font-bold">
-      <th scope="row">Change in Total Net Assets</th>
-      <td class="active">$7,635,153</td>
-      <td>$20,419,706</td>
-      <td>$13,939,975</td>
+      <th scope="row" class="align-top">Change in Total Net Assets</th>
+      <td class="active align-top">$7,635,153</td>
+      <td class="align-top">$20,419,706</td>
+      <td class="align-top">$13,939,975</td>
     </tr>
   </tbody>
 </table>

@@ -1,9 +1,9 @@
 @props(['bio'])
 
-<article {{ $attributes->merge(['class' => 'leader flex flex-col md:grid gap-9 pb-4 md:pb-12 my-4']) }}>
+<article {{ $attributes->merge(['class' => 'leader flex flex-col md:grid gap-9 mt-6']) }}>
     @if ($bio->image)
       <div class="relative h-0">
-        <img class="lazyload max-h-80 absolute w-full h-full object-cover" src="{{ url($bio->image) }}" alt="{{ $bio->image_alt }}" />
+        <img class="lazyload absolute w-full h-full object-cover" src="{{ url($bio->image) }}" alt="{{ $bio->image_alt }}" />
       </div>
     @endif
     <div class="leader__bio">

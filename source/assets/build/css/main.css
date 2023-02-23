@@ -96,6 +96,16 @@ footer .social-link {
     width: 26%;
   }
 }
+@keyframes extendDown {
+  from {
+    height: 0;
+    opacity: 0;
+  }
+  to {
+    height: calc(100% + 10rem);
+    opacity: 1;
+  }
+}
 .bg-cyan-card {
   color: #107E5F;
 }
@@ -128,28 +138,48 @@ footer .social-link {
   color: #3D8700;
 }
 
-@media only screen and (max-width: 640px) {
-  h2 {
-    font-size: clamp(1.5rem, 6vw, 1.75rem) !important;
-  }
-}
-@media only screen and (max-width: 640px) {
-  h2:not(.small-h2) {
-    font-size: clamp(1.75rem, 6vw, 2rem) !important;
-  }
-}
-
 body {
   font-family: "Inter", sans-serif;
 }
 
-@media only screen and (min-width: 1024px) {
-  .articles .impact-article > div {
-    height: 0;
-    padding-bottom: clamp(600px, 80vw, 700px);
-    width: calc(100% - 4rem);
+@media only screen and (max-width: 640px) {
+  h2, .h2 {
+    font-size: clamp(1.5rem, 6vw, 1.75rem) !important;
   }
-  .articles .impact-article > div img {
+}
+@media only screen and (max-width: 640px) {
+  h2:not(.h2-hero), .h2:not(.h2-hero) {
+    font-size: clamp(1.75rem, 6vw, 2rem) !important;
+  }
+}
+
+@media only screen and (min-width: 1024px) {
+  .h2 {
+    padding-left: 40px;
+    padding-right: 40px;
+  }
+}
+
+.articles {
+  padding-bottom: 40px;
+}
+.articles .wrapper {
+  padding-bottom: 0;
+}
+@media only screen and (min-width: 768px) {
+  .articles {
+    padding-bottom: 80px;
+  }
+}
+@media only screen and (min-width: 1024px) {
+  .articles {
+    padding-bottom: 120px;
+  }
+  .articles .impact-article__body {
+    height: 0;
+    padding-bottom: clamp(600px, 80vw, 750px);
+  }
+  .articles .impact-article__body img {
     position: absolute;
     width: 100%;
     height: 100%;
@@ -167,6 +197,28 @@ body {
   }
 }
 
+.impact-article__spotlight {
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+@media only screen and (min-width: 1024px) and (max-width: 1279px) {
+  .spacer ~ article {
+    padding-top: 20px;
+  }
+}
+@media only screen and (min-width: 1280px) {
+  .spacer ~ article h2 {
+    display: flex;
+    justify-content: center;
+    align-items: flex-end;
+    height: 100px;
+  }
+  .spacer ~ article h2.green-rule__article::before {
+    top: -10rem;
+    height: calc(100% + 10rem);
+  }
+}
 button[role=tab]:not(button[aria-selected=true]):hover, button[role=tab]:not(button[aria-selected=true]):focus {
   background-color: #003E67;
   color: #B8DB00;
@@ -177,70 +229,43 @@ button[aria-selected=true] {
   color: #022C48;
 }
 
-.green-rule, .green-rule__tabs, .green-rule__article, .green-rule__hero {
+.green-rule, .green-rule__hero, .green-rule__article, .green-rule__tabs {
   position: relative;
 }
-.green-rule::before, .green-rule__tabs::before, .green-rule__article::before, .green-rule__hero::before {
+.green-rule::before, .green-rule__hero::before, .green-rule__article::before, .green-rule__tabs::before {
   content: "";
   position: absolute;
-  left: -1rem;
+  left: -68px;
+  top: -10rem;
   background-color: #BBD163;
   width: 3rem;
-  height: 10rem;
+  height: calc(100% + 10rem);
   transition: opacity 0.5s, transform 0.5s;
-}
-.green-rule__hero::before {
-  left: -2rem;
-  height: 52px;
-  bottom: calc(100% + 1rem);
-}
-.green-rule__article::before {
-  bottom: calc(100% - 3rem);
-}
-.green-rule__tabs::before {
-  left: -3rem;
-  bottom: calc(100% - 2.5rem);
-}
-.green-rule.in-viewport::before, .in-viewport.green-rule__hero::before, .in-viewport.green-rule__article::before, .in-viewport.green-rule__tabs::before {
-  animation: fadeInUp;
-  animation-duration: 0.5s;
-}
-@media only screen and (min-width: 640px) {
-  .green-rule__hero::before {
-    left: -2rem;
-    bottom: calc(100% + 3rem);
-  }
-}
-@media only screen and (min-width: 768px) {
-  .green-rule::before, .green-rule__hero::before, .green-rule__article::before, .green-rule__tabs::before {
-    left: 1.5rem;
-  }
-  .green-rule__hero::before {
-    height: 6rem;
-    left: 0;
-    bottom: calc(100% + 2.9rem);
-  }
-  .green-rule__article::before {
-    left: 2rem;
-    bottom: calc(100% - 5rem);
-  }
-  .green-rule__tabs::before {
-    left: 0;
-  }
-}
-@media only screen and (min-width: 1024px) {
-  .green-rule__hero::before {
-    height: 10rem;
-  }
 }
 @media only screen and (min-width: 1280px) {
   .green-rule::before, .green-rule__hero::before, .green-rule__article::before, .green-rule__tabs::before {
-    left: 5.5rem;
-    height: 12rem;
+    left: 0;
   }
-  .green-rule__article::before {
-    left: 5.5rem;
+}
+.green-rule__hero::before {
+  top: -7rem;
+}
+@media only screen and (min-width: 640px) {
+  .green-rule__hero::before {
+    top: -10.25rem;
   }
+}
+@media only screen and (min-width: 1024px) {
+  .green-rule__hero {
+    height: 2rem;
+  }
+  .green-rule__hero::before {
+    top: -12.75rem;
+  }
+}
+.green-rule.in-viewport::before, .in-viewport.green-rule__hero::before, .in-viewport.green-rule__article::before, .in-viewport.green-rule__tabs::before {
+  animation: extendDown;
+  animation-duration: 0.5s;
 }
 
 table {
@@ -252,6 +277,10 @@ table tbody tr:not(:last-child) th {
 table tbody tr:not(:last-child) td {
   border: 2px solid #64B53E;
 }
+table tbody tr th, table tbody tr td {
+  padding: 0.25rem 0.5rem;
+  width: 50%;
+}
 table tbody tr th {
   width: clamp(200px, 35vw, 600px);
 }
@@ -261,14 +290,6 @@ table tbody tr th:first-child {
 table tbody tr td {
   text-align: right;
 }
-@media only screen and (min-width: 640px) {
-  table tr th {
-    padding: 0.25rem;
-  }
-  table tr td {
-    padding: 0.25rem;
-  }
-}
 @media only screen and (max-width: 767px) {
   table thead th[scope=col]:not(.active),
   table tbody td:not(.active) {
@@ -276,12 +297,24 @@ table tbody tr td {
   }
 }
 @media only screen and (min-width: 768px) {
-  table tr th {
+  table tr th, table tr td {
     padding: 0.5rem 1rem;
   }
-  table tr td {
-    padding: 0.5rem 1rem;
+  table tr th:first-child, table tr td:first-child {
+    width: 40%;
   }
+  table tr th:not(:first-child), table tr td:not(:first-child) {
+    width: 20%;
+  }
+}
+
+nav.table-years button {
+  -webkit-text-decoration: 1px underline;
+          text-decoration: 1px underline;
+}
+nav.table-years button:hover {
+  -webkit-text-decoration: 2px underline;
+          text-decoration: 2px underline;
 }
 
 .progress-bar {
@@ -295,31 +328,6 @@ table tbody tr td {
   animation-name: extend;
   animation-duration: 1.5s;
   animation-iteration-count: 1;
-}
-
-@media only screen and (min-width: 540px) {
-  .investment-goal > div > .grid {
-    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-    grid-gap: 1rem;
-  }
-}
-@media only screen and (min-width: 640px) {
-  .investment-goal > div > .grid {
-    grid-template-columns: repeat(auto-fit, minmax(270px, 1fr));
-  }
-}
-@media only screen and (min-width: 768px) {
-  .investment-goal > div > .grid {
-    grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
-  }
-}
-@media only screen and (min-width: 1024px) {
-  .investment-goal > div > .grid {
-    grid-template-columns: repeat(auto-fit, minmax(205px, 1fr));
-  }
-  .investment-goal .goal {
-    font-size: clamp(3.5rem, 6vw, 6rem);
-  }
 }
 
 .goal {
@@ -337,6 +345,14 @@ table tbody tr td {
 }
 .goal.goal-total {
   font-size: clamp(4.5rem, 18vw, 8rem);
+}
+.goal.goal-total .unit {
+  padding-bottom: 0.5%;
+}
+@media only screen and (min-width: 1024px) {
+  .goal {
+    font-size: clamp(3.5rem, 6vw, 6rem);
+  }
 }
 
 .card__body img {
@@ -373,13 +389,13 @@ table tbody tr td {
 }
 
 .leadership .grid {
-  gap: 0 2rem;
+  gap: 2rem;
 }
 .leadership article {
   grid-template-rows: auto 1fr;
 }
 .leadership article > div:first-child {
-  padding-bottom: clamp(275px, 80%, 325px);
+  padding-bottom: clamp(275px, 80%, 400px);
 }
 .leadership article:first-child img {
   -o-object-fit: cover;
@@ -390,6 +406,9 @@ table tbody tr td {
      object-fit: contain;
 }
 @media only screen and (min-width: 824px) {
+  .leadership article > div:first-child {
+    padding-bottom: clamp(200px, 80%, 325px);
+  }
   .leadership > div > .grid {
     grid-template-columns: repeat(auto-fit, minmax(205px, 1fr));
   }
@@ -425,6 +444,36 @@ body a {
 body a:hover, body a:focus {
   -webkit-text-decoration: underline 2px;
           text-decoration: underline 2px;
+}
+
+.wrapper {
+  width: 100%;
+  max-width: 1280px;
+  margin: 0 auto;
+  padding: 40px;
+}
+.leadership .wrapper {
+  padding-top: 40px;
+}
+@media only screen and (min-width: 1280px) {
+  .wrapper-wide {
+    max-width: 1500px;
+  }
+  .wrapper-wide h2:not(.h2-wide), .wrapper-wide .h2 {
+    max-width: 1200px;
+    margin-left: auto;
+    margin-right: auto;
+  }
+}
+@media only screen and (min-width: 768px) {
+  .wrapper {
+    padding: 80px 40px;
+  }
+}
+@media only screen and (min-width: 1024px) {
+  .wrapper {
+    padding: 100px 40px;
+  }
 }
 
 @media only screen and (max-width: 639px) {
@@ -1003,6 +1052,12 @@ video {
 .mt-2 {
   margin-top: 0.5rem;
 }
+.mt-4 {
+  margin-top: 1rem;
+}
+.mt-6 {
+  margin-top: 1.5rem;
+}
 .mt-8 {
   margin-top: 2rem;
 }
@@ -1030,9 +1085,6 @@ video {
 .h-full {
   height: 100%;
 }
-.max-h-80 {
-  max-height: 20rem;
-}
 .w-32 {
   width: 8rem;
 }
@@ -1046,17 +1098,14 @@ video {
 .w-full {
   width: 100%;
 }
-.max-w-4xl {
-  max-width: 56rem;
-}
 .max-w-6xl {
   max-width: 72rem;
 }
-.max-w-7xl {
-  max-width: 80rem;
+.max-w-\[1024px\] {
+  max-width: 1024px;
 }
-.max-w-\[69rem\] {
-  max-width: 69rem;
+.max-w-\[1280px\] {
+  max-width: 1280px;
 }
 .border-collapse {
   border-collapse: collapse;
@@ -1071,11 +1120,11 @@ video {
   -moz-column-break-inside: avoid;
        break-inside: avoid;
 }
+.grid-cols-3 {
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+}
 .flex-col {
   flex-direction: column;
-}
-.flex-wrap {
-  flex-wrap: wrap;
 }
 .items-end {
   align-items: flex-end;
@@ -1229,10 +1278,6 @@ video {
   padding-top: 3rem;
   padding-bottom: 3rem;
 }
-.py-16 {
-  padding-top: 4rem;
-  padding-bottom: 4rem;
-}
 .py-2 {
   padding-top: 0.5rem;
   padding-bottom: 0.5rem;
@@ -1245,38 +1290,32 @@ video {
   padding-top: 2rem;
   padding-bottom: 2rem;
 }
-.pb-16 {
-  padding-bottom: 4rem;
-}
 .pb-8 {
   padding-bottom: 2rem;
 }
 .pb-\[150\%\] {
   padding-bottom: 150%;
 }
+.pb-\[60px\] {
+  padding-bottom: 60px;
+}
 .pl-4 {
   padding-left: 1rem;
-}
-.pl-6 {
-  padding-left: 1.5rem;
 }
 .pr-1 {
   padding-right: 0.25rem;
 }
-.pr-8 {
-  padding-right: 2rem;
-}
-.pt-16 {
-  padding-top: 4rem;
+.pt-12 {
+  padding-top: 3rem;
 }
 .pt-4 {
   padding-top: 1rem;
 }
-.pb-4 {
-  padding-bottom: 1rem;
-}
 .text-center {
   text-align: center;
+}
+.align-top {
+  vertical-align: top;
 }
 .font-sans {
   font-family: Inter, Helvetica, Arial, sans-serif;
@@ -1292,6 +1331,9 @@ video {
 .text-4xl {
   font-size: 2.25rem;
   line-height: 2.5rem;
+}
+.text-\[14px\] {
+  font-size: 14px;
 }
 .text-lg {
   font-size: 1.125rem;
@@ -1400,10 +1442,6 @@ video {
 }
 @media (min-width: 640px) {
 
-  .sm\:-bottom-3 {
-    bottom: -0.75rem;
-  }
-
   .sm\:mr-4 {
     margin-right: 1rem;
   }
@@ -1416,8 +1454,8 @@ video {
     width: 125px;
   }
 
-  .sm\:w-\[80\%\] {
-    width: 80%;
+  .sm\:grid-cols-2 {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
   }
 
   .sm\:flex-row {
@@ -1426,6 +1464,10 @@ video {
 
   .sm\:flex-col {
     flex-direction: column;
+  }
+
+  .sm\:flex-wrap {
+    flex-wrap: wrap;
   }
 
   .sm\:justify-end {
@@ -1441,40 +1483,18 @@ video {
     padding-right: 4rem;
   }
 
-  .sm\:px-8 {
-    padding-left: 2rem;
-    padding-right: 2rem;
-  }
-
-  .sm\:py-16 {
-    padding-top: 4rem;
-    padding-bottom: 4rem;
-  }
-
-  .sm\:py-20 {
-    padding-top: 5rem;
-    padding-bottom: 5rem;
-  }
-
   .sm\:py-3 {
     padding-top: 0.75rem;
     padding-bottom: 0.75rem;
   }
 
-  .sm\:pb-20 {
-    padding-bottom: 5rem;
-  }
-
-  .sm\:pb-24 {
-    padding-bottom: 6rem;
+  .sm\:py-6 {
+    padding-top: 1.5rem;
+    padding-bottom: 1.5rem;
   }
 
   .sm\:pr-16 {
     padding-right: 4rem;
-  }
-
-  .sm\:pt-20 {
-    padding-top: 5rem;
   }
 
   .sm\:text-2xl {
@@ -1487,9 +1507,9 @@ video {
     line-height: 2.25rem;
   }
 
-  .sm\:text-4xl {
-    font-size: 2.25rem;
-    line-height: 2.5rem;
+  .sm\:text-6xl {
+    font-size: 3.75rem;
+    line-height: 1;
   }
 }
 @media (min-width: 768px) {
@@ -1535,39 +1555,8 @@ video {
     flex-direction: row;
   }
 
-  .md\:py-12 {
-    padding-top: 3rem;
-    padding-bottom: 3rem;
-  }
-
-  .md\:py-4 {
-    padding-top: 1rem;
-    padding-bottom: 1rem;
-  }
-
-  .md\:pb-32 {
-    padding-bottom: 8rem;
-  }
-
-  .md\:pl-16 {
-    padding-left: 4rem;
-  }
-
-  .md\:pb-12 {
-    padding-bottom: 3rem;
-  }
-
-  .md\:pt-12 {
-    padding-top: 3rem;
-  }
-
   .md\:text-5xl {
     font-size: 3rem;
-    line-height: 1;
-  }
-
-  .md\:text-6xl {
-    font-size: 3.75rem;
     line-height: 1;
   }
 }
@@ -1575,14 +1564,6 @@ video {
 
   .lg\:absolute {
     position: absolute;
-  }
-
-  .lg\:-bottom-6 {
-    bottom: -1.5rem;
-  }
-
-  .lg\:mt-8 {
-    margin-top: 2rem;
   }
 
   .lg\:flex {
@@ -1607,6 +1588,10 @@ video {
          columns: 3;
   }
 
+  .lg\:grid-cols-4 {
+    grid-template-columns: repeat(4, minmax(0, 1fr));
+  }
+
   .lg\:items-center {
     align-items: center;
   }
@@ -1617,11 +1602,6 @@ video {
 
   .lg\:p-16 {
     padding: 4rem;
-  }
-
-  .lg\:px-0 {
-    padding-left: 0px;
-    padding-right: 0px;
   }
 
   .lg\:px-24 {
@@ -1639,26 +1619,17 @@ video {
     padding-bottom: 1rem;
   }
 
-  .lg\:py-6 {
-    padding-top: 1.5rem;
-    padding-bottom: 1.5rem;
-  }
-
   .lg\:py-8 {
     padding-top: 2rem;
     padding-bottom: 2rem;
   }
 
-  .lg\:pb-40 {
-    padding-bottom: 10rem;
-  }
-
-  .lg\:pl-12 {
-    padding-left: 3rem;
-  }
-
   .lg\:pr-24 {
     padding-right: 6rem;
+  }
+
+  .lg\:pt-4 {
+    padding-top: 1rem;
   }
 
   .lg\:text-4xl {
@@ -1666,8 +1637,8 @@ video {
     line-height: 2.5rem;
   }
 
-  .lg\:text-7xl {
-    font-size: 4.5rem;
+  .lg\:text-8xl {
+    font-size: 6rem;
     line-height: 1;
   }
 
@@ -1677,22 +1648,21 @@ video {
 }
 @media (min-width: 1280px) {
 
-  .xl\:py-24 {
-    padding-top: 6rem;
-    padding-bottom: 6rem;
+  .xl\:h-0 {
+    height: 0px;
   }
 
-  .xl\:pl-0 {
-    padding-left: 0px;
+  .xl\:px-\[80px\] {
+    padding-left: 80px;
+    padding-right: 80px;
+  }
+
+  .xl\:pl-20 {
+    padding-left: 5rem;
   }
 
   .xl\:text-5xl {
     font-size: 3rem;
-    line-height: 1;
-  }
-
-  .xl\:text-8xl {
-    font-size: 6rem;
     line-height: 1;
   }
 }

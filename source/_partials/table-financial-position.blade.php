@@ -1,9 +1,9 @@
 <h3>Financial Position</h3>
 <p>As of June 30</p>
-<nav class="table-years mb-4 md:hidden" data-tables="financial-position">
-  <button data-col="1" class="active">2021</button>
-  <button data-col="2">2020</button>
-  <button data-col="3">2019</button>
+<nav class="table-years mb-4 md:hidden w-full grid grid-cols-3 py-8 mt-4" data-tables="financial-position">
+  <button data-col="1" class="active text-2xl">2022</button>
+  <button data-col="2" class="text-2xl">2021</button>
+  <button data-col="3" class="text-2xl">2020</button>
 </nav>
 <table class="my-8 financial-position w-full">
   <caption class="sr-only">LIIF assets for 2022 (as of June 30th), 2021, and 2020.</caption>
@@ -47,10 +47,10 @@
       <td>$23,069,241</td>
     </tr>
     <tr class="font-bold">
-      <th scope="row">Total Assets</th>
-      <td class="active">$601,119,949</td>
-      <td>$639,837,619</td>
-      <td>$576,150,842</td>
+      <th scope="row" class="align-top">Total Assets</th>
+      <td class="active align-top">$601,119,949</td>
+      <td class="align-top">$639,837,619</td>
+      <td class="align-top">$576,150,842</td>
     </tr>
   </tbody>
 </table>
@@ -85,10 +85,10 @@
       <td>$20,431,501</td>
     </tr>
     <tr class="font-bold">
-      <th scope="row">Total Liabiliies</th>
-      <td class="active">$435,925,726</td>
-      <td>$482,278,549</td>
-      <td>$439,011,478</td>
+      <th scope="row" class="align-top">Total Liabiliies</th>
+      <td class="active align-top">$435,925,726</td>
+      <td class="align-top">$482,278,549</td>
+      <td class="align-top">$439,011,478</td>
     </tr>
   </tbody>
 </table>
@@ -129,10 +129,10 @@
       <td>$137,139,364</td>
     </tr>
     <tr class="font-bold">
-      <th scope="row">Total Liabilities and Net Assets</th>
-      <td class="active">$601,119,949</td>
-      <td>$639,837,619</td>
-      <td>$576,150,842</td>
+      <th scope="row" class="align-top">Total Liabilities and Net Assets</th>
+      <td class="active align-top">$601,119,949</td>
+      <td class="align-top">$639,837,619</td>
+      <td class="align-top">$576,150,842</td>
     </tr>
   </tbody>
 </table>

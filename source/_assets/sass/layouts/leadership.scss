@@ -1,13 +1,13 @@
 .leadership  {
   .grid {
-    gap: 0 2rem;
+    gap: 2rem;
   }
 
   article {
     grid-template-rows: auto 1fr;
 
     & > div:first-child {
-      padding-bottom: clamp(275px, 80%, 325px);
+      padding-bottom: clamp(275px, 80%, 400px);
     }
 
     &:first-child {
@@ -24,6 +24,12 @@
   }
 
   @media only screen and (min-width: 824px) {
+    article {
+      & > div:first-child {
+        padding-bottom: clamp(200px, 80%, 325px);
+      }
+    }
+
     & > div > .grid {
       grid-template-columns: repeat(auto-fit, minmax(205px, 1fr));
 

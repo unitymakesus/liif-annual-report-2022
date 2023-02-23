@@ -26,6 +26,37 @@ body {
   }
 }
 
+.wrapper {
+  width: 100%;
+  max-width: 1280px;
+  margin: 0 auto;
+  padding: 40px;
+
+  .leadership & {
+    padding-top: 40px;
+  }
+
+  &-wide {
+    @media only screen and (min-width: 1280px) {
+      max-width: 1500px;
+
+      h2:not(.h2-wide), .h2 {
+        max-width: 1200px;
+        margin-left: auto;
+        margin-right: auto;
+      }
+    }
+  }
+
+  @media only screen and (min-width: 768px) {
+    padding: 80px 40px;
+  }
+
+  @media only screen and (min-width: 1024px) {
+    padding: 100px 40px;
+  }
+}
+
 @media only screen and (max-width: 639px) {
   .header .social-icons {
     display: none;
@@ -33,8 +64,6 @@ body {
 }
 
 .social-link {
-  // transition: all 0.25s;
-
   &:hover,
   &:focus {
     box-shadow: 0px 3px 5px #00000069;

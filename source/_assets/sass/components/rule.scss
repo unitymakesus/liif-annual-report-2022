@@ -4,102 +4,48 @@
   &::before {
     content: '';
     position: absolute;
-    left: -1rem;
+    left: -68px;
+    top: -10rem;
     background-color: $green-lime-light;
     width: 3rem;
-    height: 10rem;
+    height: calc(100% + 10rem);
     transition: opacity .5s, transform .5s;
+
+    @media only screen and (min-width: 1280px) {
+      left: 0;
+    }
+  }
+
+  &__hero,
+  &__article,
+  &__tabs {
+    @extend .green-rule;
   }
 
   &__hero {
-    @extend .green-rule;
     &::before {
-      left: -2rem;
-      height: 52px;
-      bottom: calc(100% + 1rem);
+      top: -7rem;
     }
-  }
 
-  &__article {
-    @extend .green-rule;
-    &::before {
-      bottom: calc(100% - 3rem);
+    @media only screen and (min-width: 640px) {
+      &::before {
+        top: -10.25rem;
+      }
     }
-  }
 
-  &__tabs {
-    @extend .green-rule;
-    &::before {
-      left: -3rem;
-      bottom: calc(100% - 2.5rem);
+    @media only screen and (min-width: 1024px) {
+      height: 2rem;
+
+      &::before {
+        top: -12.75rem;
+      }
     }
   }
 
   &.in-viewport {
     &::before {
-      animation: fadeInUp;
+      animation: extendDown;
       animation-duration: .5s;
-    }
-  }
-
-  // Mobile - large
-  @media only screen and (min-width: 640px) {
-    &__hero {
-      &::before {
-        left: -2rem;
-        bottom: calc(100% + 3rem);
-      }
-    }
-  }
-
-  // Tablet
-  @media only screen and (min-width: 768px) {
-    &::before {
-      left: 1.5rem;
-    }
-
-    &__hero {
-      &::before {
-        height: 6rem;
-        left: 0;
-        bottom: calc(100% + 2.9rem)
-      }
-    }
-
-    &__article {
-      &::before {
-        left: 2rem;
-        bottom: calc(100% - 5rem);
-      }
-    }
-
-    &__tabs {
-      &::before {
-        left: 0;
-      }
-    }
-  }
-
-  // Desktop
-  @media only screen and (min-width: 1024px) {
-    &__hero {
-      &::before {
-        height: 10rem;
-      }
-    }
-  }
-
-  // Destop - wide
-  @media only screen and (min-width: 1280px) {
-    &::before {
-      left: 5.5rem;
-      height: 12rem;
-    }
-
-    &__article {
-      &::before {
-        left: 5.5rem;
-      }
     }
   }
 }

@@ -13,6 +13,11 @@ table {
     }
 
     tr {
+      th, td {
+        padding: 0.25rem 0.5rem;
+        width: 50%;
+      }
+
       th {
         width: clamp(200px, 35vw, 600px);
 
@@ -27,17 +32,6 @@ table {
     }
   }
 
-  @media only screen and (min-width: 640px) {
-    tr {
-      th {
-        padding: 0.25rem;
-      }
-      td {
-        padding: 0.25rem;
-      }
-    }
-  }
-
   @media only screen and (max-width: 767px) {
     thead th[scope="col"]:not(.active),
     tbody td:not(.active) {
@@ -47,12 +41,27 @@ table {
 
   @media only screen and (min-width: 768px) {
     tr {
-      th {
+      th, td {
         padding: 0.5rem 1rem;
+        
+        &:first-child {
+          width: 40%;
+        }
+
+        &:not(:first-child) {
+          width: 20%;
+        }
       }
-      td {
-        padding: 0.5rem 1rem;
-      }
+    }
+  }
+}
+
+nav.table-years {
+  button {
+    text-decoration: 1px underline;
+
+    &:hover {
+      text-decoration: 2px underline;
     }
   }
 }
