@@ -3,7 +3,7 @@
 <article class="impact-article wrapper wrapper-wide">
   <h2 class="text-{{ $article->color }} text-center font-bold text-4xl md:text-5xl mb-8 relative green-rule__article">{{ $article->title }}</h2>
   <div class="impact-article__body relative lg:flex lg:align-center {{ $article->excerpt_pos }}">
-    <img class="hero__bg-img lazyload w-full" src="{{ url($article->image) }}" alt="{{$article->image_alt}}" />
+    <img class="hero__bg-img lazyload w-full {{ $article->image_pos}}" src="{{ url($article->image) }}" alt="{{$article->image_alt}}" />
     <div class="impact-article__text lg:p-16 lg:flex lg:items-center lg:absolute lg:h-full">
       <div class="bg-white py-8 lg:px-8">
         <h3 class="text-{{ $article->color }} text-xl mb-5 font-bold">{{ $article->subtitle }}</h3>

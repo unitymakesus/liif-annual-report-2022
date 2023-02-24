@@ -60,7 +60,8 @@ nav.table-years {
   button {
     text-decoration: 1px underline;
 
-    &:hover {
+    &:hover,
+    &.active {
       text-decoration: 2px underline;
     }
   }

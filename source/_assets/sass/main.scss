@@ -98,3 +98,13 @@ body {
 label[for=mce-email] {
   text-align: left;
 }
+
+.footer-form {
+  label {
+    color: #FFF;
+  }
+  input {
+    color: #000;
+    outline-color: #FFF !important;
+  }
+}

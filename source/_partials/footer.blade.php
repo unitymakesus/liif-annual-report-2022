@@ -7,7 +7,7 @@
     </div>
     <div class="mt-8 md:mt-0 w-full">
       <form class="flex flex-col sm:flex-row justify-center" action="https://liifund.us13.list-manage.com/subscribe/post?u=a27878232e2220f64b0fb32cb&amp;id=2f9987be46" method="post">
-        <div class="flex flex-col sm:mr-4 text-white">
+        <div class="footer-form flex flex-col sm:mr-4">
           <label for="mce-email">Your email address</label>
           <input class="border rounded-none py-2 px-4 w-auto md:w-72 bg-white text-sm text-dark-blue" type="email" name="EMAIL" id="mce-email">
         </div>

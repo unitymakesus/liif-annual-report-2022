@@ -33,6 +33,10 @@
 
     .unit {
       padding-bottom: 0.5%;
+
+      @media only screen and (min-width: 768px) {
+        padding-bottom: 1.5%;
+      }
     }
   }
 

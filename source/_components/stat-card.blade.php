@@ -2,7 +2,7 @@
 
 <div class="card w-full mx-auto">
   <div class="card__title bg-{{ $card->color }} flex justify-center my-4">
-      <h3 class="uppercase font-bold text-white text-xl py-8">{{ $card->title }}</h3>
+      <h3 class="text-center uppercase font-bold text-white text-xl py-8">{{ $card->title }}</h3>
   </div>
   <div class="card__body bg-{{ $card->color }}-overlay relative h-0 pb-[150%]">
       <img class="lazyload w-full h-full absolute object-cover top-0 left-0" src="{{ url( $card->image ) }}" alt="{{ $card->image_alt }}" />

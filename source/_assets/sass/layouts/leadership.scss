@@ -3,20 +3,21 @@
     gap: 2rem;
   }
 
-  article {
+  .leader {
     grid-template-rows: auto 1fr;
 
-    & > div:first-child {
+    &__img {
       padding-bottom: clamp(275px, 80%, 400px);
     }
 
-    &:first-child {
+    &.img-top {
       img {
         object-fit: cover;
+        border-radius: clamp(50px, 50%, 7rem);
       }
     }
 
-    &:not(:first-child) {
+    &.img-bottom {
       img {
         object-fit: contain;
       }
@@ -24,9 +25,9 @@
   }
 
   @media only screen and (min-width: 824px) {
-    article {
-      & > div:first-child {
-        padding-bottom: clamp(200px, 80%, 325px);
+    .leader {
+      &__img {
+        padding-bottom: clamp(200px, 70%, 300px);
       }
     }
 
@@ -34,7 +35,7 @@
       grid-template-columns: repeat(auto-fit, minmax(205px, 1fr));
 
       .leader:not(:first-child) {
-        .leader__bio {
+        // .leader__bio {
           position: relative;
 
           &::before {
@@ -46,7 +47,7 @@
             left: -1rem;
             background: #000;
           }
-        }
+        // }
       }
     }
   }
