@@ -36,6 +36,10 @@
         & > div {
           max-width: 400px;
           height: 100%;
+          
+          & > * {
+            color: inherit;
+          }
         }
       }
     }

@@ -107,7 +107,7 @@ window.addEventListener('DOMContentLoaded', () => {
         });
       });
 
-      const animateEls = document.querySelectorAll('.progress-bar__overlay, .hero__subtitles, .green-rule, .green-rule__hero, .green-rule__article, .green-rule__tabs, .progress, .card__body');
+      const animateEls = document.querySelectorAll('.progress-bar__overlay, .hero__subtitles, .green-rule, .green-rule__hero, .green-rule__article, .green-rule__tabs, .progress, .card__body, .card__note');
       animateEls.forEach(el => {
         accentObserver.observe(el);
       });

@@ -51,7 +51,10 @@
       object-position: top center;
       mix-blend-mode: multiply;
     }
+  }
 
+  &__body,
+  &__note {
     @media only screen and (min-width: 640px) {
       &.in-viewport {
         animation-name: fadeInUp;

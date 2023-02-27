@@ -1,5 +1,4 @@
-<h3>Financial Activities</h3>
-<p>As of June 30</p>
+<h3>Per Fiscal Year 2022 audited financials</h3>
 <nav class="table-years mb-4 md:hidden w-full grid grid-cols-3 py-8 mt-4" data-tables="financial-activities">
   <button data-col="1" class="active text-2xl">2022</button>
   <button data-col="2" class="text-2xl" >2021</button>
