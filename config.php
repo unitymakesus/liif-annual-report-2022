@@ -260,7 +260,7 @@ return [
                     'officers' => [
                         [
                             'name' => 'Reymundo Ocañas, Chair',
-                            'title' => 'Director of Community Development Banking, PNC Bank',
+                            'title' => 'Director of Community Development Banking,<br/>PNC Bank',
                         ],
                         [
                             'name' => 'Carol Naughton, Treasurer',
@@ -324,7 +324,7 @@ return [
                         ],
                         [
                             'name' => 'Eileen Fitzgerald',
-                            'title' => 'Former Head of Housing Affordability Philanthropy, Wells Fargo',
+                            'title' => 'Former Head of Housing Affordability<br/>Philanthropy, Wells Fargo',
                         ],
                         [
                             'name' => 'Jessica Sager',
