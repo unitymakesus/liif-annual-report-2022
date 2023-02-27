@@ -2,11 +2,11 @@
 
 <article
   @if ($bio->image_pos === 'top')
-    {{ $attributes->merge(['class' => 'leader flex flex-col md:grid gap-9 mt-6 img-top']) }}
+    {{ $attributes->merge(['class' => 'leader img-top']) }}
   @else
-    {{ $attributes->merge(['class' => 'leader flex flex-col md:grid gap-9 mt-6 img-bottom']) }}  
+    {{ $attributes->merge(['class' => 'leader img-bottom']) }}  
   @endif
->
+> <div class="leader__inner flex flex-col md:grid gap-9 mt-6">
     @if ($bio->image_pos === 'top')
       @if ($bio->image)
         <div class="leader__img relative h-0">
@@ -38,4 +38,5 @@
         </div>
       @endif
     @endif
+  </div>
 </article>
