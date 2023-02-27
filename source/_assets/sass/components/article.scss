@@ -62,7 +62,12 @@
 @media only screen and (min-width: 1280px) {
   .spacer {
     padding-bottom: 1rem;
+
+    &:last-child {
+      padding-bottom: 3rem;
+    }
   }
+
   .spacer ~ article {
     h2 {
       display: flex;
