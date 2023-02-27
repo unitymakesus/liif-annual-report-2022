@@ -59,28 +59,11 @@
             </ul>
           </div>
         @elseif (in_array($list->slug, ['committees']))
+          <p class="text-green-text mb-4 font-semibold">The following committees provide governance in support of our mission.</p>
           @foreach ($list->items as $item)
-            @if ($item['col_start'])
-              <div class="col-{{ $item['col_start'] }}">
-            @endif
-              <div class="mb-8">
-                <h3 class="font-semibold mb-4 text-lg text-green-text">{{ $item['name'] }}</h3>
-                <ul class="md:columns-2 lg:columns-3 gap-3 flex flex-col">
-                  @foreach ($item['items'] as $committee)
-                    <li class="mb-4 text-sm break-inside-avoid text-green-text">
-                      @if ($committee['title'])
-                        <span class="inline">{{ $committee['name'] }}, </span>
-                        <span class="italic inline">{!! $committee['title'] !!}</span>
-                      @else
-                        <span class="block">{{ $committee['name'] }}</span>
-                      @endif
-                    </li>
-                  @endforeach
-                </ul>
-              </div>
-            @if ($item['col_end'])
-              </div>
-            @endif
+            <div class="mb-4">
+              <h3 class="mb-2 text-green-text">{{ $item['name'] }}</h3>
+            </div>
           @endforeach
         @else
           <div>

@@ -17,7 +17,7 @@ return [
                     'name'      => 'Daniel A. Nissenbaum',
                     'name_2'    => 'Reymundo Ocañas',
                     'title'     => 'LIIF Chief Executive Officer',
-                    'title_2'   => 'LIIF Board Chair<br/>Director of Community Banking, Executive Vice President, PNC Bank',
+                    'title_2'   => 'LIIF Board Chair<br/>Director of Community Banking,<br/>Executive Vice President, PNC Bank',
                     'slug'      => 'dear-friends',
                     'excerpt'   => 'LIIF – like everyone else in our society – is learning to adjust to a “new normal.” For many the “new normal” began with the COVID-19 pandemic. For us, we began redefining LIIF’s “new normal” in 2019 with the crafting of our strategic plan. As we hit the halfway mark of this transformational four-year roadmap, we feel even more confident in our mission of advancing racial equity through equitable capital deployment, the creation and preservation of affordable housing, and ensuring more communities have access to quality child care and education.',
                     'image'     => '/assets/images/dan-and-rey.jpg',
