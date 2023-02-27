@@ -66,3 +66,28 @@ nav.table-years {
     }
   }
 }
+
+div[id=tabpanel-board-of-directors] {
+  & > div {
+    padding-top: 1rem;
+    border-top: 1px solid $green-darker;
+  }
+}
+
+div[id=tabpanel-committees]:not([hidden]) {
+  grid-gap: 0 6rem;
+  
+  & > div > div {
+    padding-top: 1rem;
+    border-top: 1px solid $green-darker;
+  }
+
+  @media only screen and (min-width: 768px) {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  @media only screen and (min-width: 1024px) {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}

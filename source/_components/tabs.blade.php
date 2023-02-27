@@ -10,12 +10,18 @@
     <div tabindex="0" role="tabpanel" id="tabpanel-{{ $list->slug }}" aria-labelledby="tab-{{ $list->slug }}" {{ $loop->first ? '' : 'hidden' }}>
       @if ($type === 'list')
         @if (in_array($list->slug, ['senior-staff']))
-          <ul class="md:columns-2 lg:columns-3 gap-3">
+          <ul class="md:columns-2 lg:grid lg:grid-cols-3 gap-3">
             @foreach ($list->items as $item)
-              <li class="mb-4 text-sm break-inside-avoid text-green-text">
-                <strong class="block">{{ $item['name'] }}</strong>
-                <span class="italic">{{ $item['title'] }}</span>
-              </li>
+              @if ($item['col_start'])
+                <div class="col-{{ $item['col_start'] }}">
+              @endif
+                <li class="mb-4 text-sm break-inside-avoid text-green-text">
+                  <strong class="block">{{ $item['name'] }}</strong>
+                  <span class="italic">{!! $item['title'] !!}</span>
+                </li>
+              @if ($item['col_end'])
+                </div>
+              @endif
             @endforeach
           </ul>
         @elseif (in_array($list->slug, ['board-of-directors']))
@@ -25,7 +31,7 @@
               @foreach ($list->officers as $officer)
                 <li class="mb-4 text-sm break-inside-avoid text-green-text">
                   <strong class="block">{{ $officer['name'] }}</strong>
-                  <span class="italic">{{ $officer['title'] }}</span>
+                  <span class="italic">{!! $officer['title'] !!}</span>
                 </li>
               @endforeach
             </ul>
@@ -47,28 +53,34 @@
               @foreach ($list->new_members as $new)
                 <li class="mb-4 text-sm break-inside-avoid text-green-text">
                   <strong class="block">{{ $new['name'] }}</strong>
-                  <span class="italic">{{ $new['title'] }}</span>
+                  <span class="italic">{!! $new['title'] !!}</span>
                 </li>
               @endforeach
             </ul>
           </div>
         @elseif (in_array($list->slug, ['committees']))
           @foreach ($list->items as $item)
-            <div class="mb-8">
-              <h3 class="font-semibold mb-4 text-lg text-green-text">{{ $item['name'] }}</h3>
-              <ul class="md:columns-2 lg:columns-3 gap-3">
-                @foreach ($item['items'] as $committee)
-                  <li class="mb-4 text-sm break-inside-avoid text-green-text">
-                    @if ($committee['title'])
-                      <strong class="block inline">{{ $committee['name'] }}, </strong>
-                      <span class="italic inline">{!! $committee['title'] !!}</span>
-                    @else
-                      <strong class="block">{{ $committee['name'] }}</strong>
-                    @endif
-                  </li>
-                @endforeach
-              </ul>
-            </div>
+            @if ($item['col_start'])
+              <div class="col-{{ $item['col_start'] }}">
+            @endif
+              <div class="mb-8">
+                <h3 class="font-semibold mb-4 text-lg text-green-text">{{ $item['name'] }}</h3>
+                <ul class="md:columns-2 lg:columns-3 gap-3 flex flex-col">
+                  @foreach ($item['items'] as $committee)
+                    <li class="mb-4 text-sm break-inside-avoid text-green-text">
+                      @if ($committee['title'])
+                        <span class="inline">{{ $committee['name'] }}, </span>
+                        <span class="italic inline">{!! $committee['title'] !!}</span>
+                      @else
+                        <span class="block">{{ $committee['name'] }}</span>
+                      @endif
+                    </li>
+                  @endforeach
+                </ul>
+              </div>
+            @if ($item['col_end'])
+              </div>
+            @endif
           @endforeach
         @else
           <div>

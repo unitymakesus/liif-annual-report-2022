@@ -20,10 +20,11 @@
       </div>
       {{-- End Progress Bar --}}
 
-      <div class="grid gap-4 sm:grid-cols-2 lg:grid-cols-4 md:mb-24">
+      <div class="grid gap-4 sm:grid-cols-2 lg:grid-cols-4">
           @foreach ($cards as $card)
               <x-stat-card :card="$card"/>
           @endforeach
+          <span class="card__note text-blue-dark font-bold text-sm mt-4 max-w-[400px] sm:max-w-none mr-0 ml-auto sm:mx-0 sm:col-span-2 lg:col-span-4 text-right italic">*four statistics from LIIF’s inception in 1984 through June 30, 2022</span>
       </div>
   </div>
 </div>

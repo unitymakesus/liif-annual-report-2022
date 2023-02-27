@@ -20,7 +20,4 @@
             <span class="block font-bold text-2xl lowercase">{!! $card->desc !!}</span>
         </div>
     </div>
-    @if ($card->note)
-        <div class="card__note text-blue-dark font-bold text-sm mt-4">{{ $card->note }}</div>
-    @endif
 </div>

@@ -15,15 +15,11 @@
       @endif
     @endif
     <div class="leader__bio">
-      <p class="mb-4">
         <h3 class="font-bold">{{ $bio->name }}</h3>
-        <span class="block mb-4 italic">{{ $bio->title }}</span>
-      </p>
+        <span class="block mb-4 italic">{!! $bio->title !!}</span>
       @if ( $name_2 = $bio->name_2 )
-        <p class="mb-4">
           <h3 class="font-bold">{{ $name_2 }}</h3>
-          <span class="block mb-4 italic">{{ $bio->title_2 }}</span>
-        </p>
+          <span class="block mb-4 italic">{!! $bio->title_2 !!}</span>
       @endif
       <p class="mb-4">{!! $bio->excerpt !!}</p>
       @if ($bio->link_url)

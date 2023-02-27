@@ -17,10 +17,10 @@ return [
                     'name'      => 'Daniel A. Nissenbaum',
                     'name_2'    => 'Reymundo Ocañas',
                     'title'     => 'LIIF Chief Executive Officer',
-                    'title_2'   => 'LIIF Board Chair Director of Community Banking, Executive Vice President, PNC Bank',
+                    'title_2'   => 'LIIF Board Chair<br/>Director of Community Banking, Executive Vice President, PNC Bank',
                     'slug'      => 'dear-friends',
                     'excerpt'   => 'LIIF – like everyone else in our society – is learning to adjust to a “new normal.” For many the “new normal” began with the COVID-19 pandemic. For us, we began redefining LIIF’s “new normal” in 2019 with the crafting of our strategic plan. As we hit the halfway mark of this transformational four-year roadmap, we feel even more confident in our mission of advancing racial equity through equitable capital deployment, the creation and preservation of affordable housing, and ensuring more communities have access to quality child care and education.',
-                    'image'     => '/assets/images/liif-dear-friends-letter.jpg',
+                    'image'     => '/assets/images/dan-and-rey.jpg',
                     'image_alt' => 'Daniel A. Nissenbaum and Reymundo Ocañas talking together while walking down the street.',
                     'image_pos' => 'top',
                     'link_url'  => 'https://www.liifund.org/justgoodcapital/2023/02/27/annual-letter-from-our-ceo-and-board-chair/',
@@ -41,7 +41,7 @@ return [
                     'name'      => 'Lucy Arellano Baglieri',
                     'title'     => 'Executive Vice President and Chief Strategy Officer',
                     'slug'      => 'lucy-vp',
-                    'excerpt'   => 'Halfway through this strategic plan, LIIF is reflecting not only on our work, but on the external environment. These past few years are marked by the height of the COVID-19 pandemic, extreme political turmoil and highly publicized murders of Black Americans by police. While these compounded inequities already faced by Black, Latino, and other people and communities of color, they also prompted a national reckoning on social injustice and racial inequity. As an organization committed to communities of opportunity, equity and well-being for all, in many ways this reckoning enabled our work.',
+                    'excerpt'   => 'Halfway through this strategic plan, LIIF is reflecting not only on our work, but on the external environment. These past few years are marked by the height of the COVID-19 pandemic, extreme political turmoil and highly publicized murders of Black Americans by police. While these compounded inequities already faced by Black, Latino, and other people and communities of color, they also prompted a national reckoning on social injustice and racial inequity.',
                     'image'     => '/assets/images/Lucy.png',
                     'image_alt' => 'Lucy Arellano Baglieri',
                     'image_pos' => 'bottom',
@@ -95,7 +95,6 @@ return [
                     'stat'      => '302',
                     'unit'      => 'K',
                     'desc'      => 'child care slots created, preserved or enhanced',
-                    'note'      => '*historical statistics through June 30, 2022',
                 ],
             ],
         ],
@@ -109,8 +108,8 @@ return [
                     'image'         => '/assets/images/article-bg-impact-lending.png',
                     'image_alt'     => 'Mother sitting next to father as she holds her smiling baby.',
                     'image_pos'     => '',
-                    'excerpt'       => 'LIIF’s strategic pillar of impact-led lending springs from our goal of nimble deployment of capital as the vehicle for effecting deeper impact in the communities we serve. With racial equity center to our mission, LIIF needed to consider where and how our efforts as a CDFI addressed the systemic inequities that create barriers to opportunity for historically excluded communities, particularly Black, Latino, and other people and communities of color. This meant moving beyond simply providing capital. We are redefining – reimagining, if you will – the impact these community investments will make for generations to come.',
-                    'excerpt_pos'   => 'right',
+                    'excerpt'       => 'LIIF’s strategic pillar of impact-led lending springs from our goal of nimble deployment of capital as the vehicle for effecting deeper impact in the communities we serve. With racial equity center to our mission, LIIF needed to consider where and how our efforts as a CDFI addressed the systemic inequities that create barriers to opportunity for historically excluded communities, particularly Black, Latino, and other people and communities of color. This meant moving beyond simply providing capital. We are redefining – <em>reimagining</em>, if you will – the impact these community investments will make for generations to come.',
+                    'excerpt_pos'   => 'left',
                     'link_url'      => 'https://www.liifund.org/justgoodcapital/2023/02/27/impact-led-lending-liifs-new-irp-framework-redefines-risk-centers-equity/',
                     'link_text'     => 'Read more',
                     'spotlight'     => '<strong>THE “HOW”: The Villages of East River</strong><br/><em>Washington, D.C.</em><br/>Our Impact-Risk-Profitability (IRP) framework will guide us to deeper and more intentional impact. An example of a project with high impact priority elements is The Villages of East River. This 202-unit, scattered-site property comprising 16 buildings is located in the predominantly Black neighborhoods of Wards 7 and 8 of Southeast Washington, D.C. In our continuing efforts to create equity around housing, we provided a $6.4 million loan to NHT Communities, an SAHF member. The proceeds were used to refinance a maturing short-term acquisition loan, and LIIF assuming the first-lien position for the interim financing package that provided a bridge to a full recapitalization using tax-exempt bonds and 4% tax credits. Additionally, LIHTC was done through NAHT and our joint venture.',
@@ -127,11 +126,12 @@ return [
                     'excerpt_pos'   => 'right',
                     'link_url'      => 'https://www.liifund.org/justgoodcapital/2023/02/27/affordable-housing-solid-partnerships-and-a-foundation-of-liifs-work/',
                     'link_text'     => 'Read more',
-                    'spotlight'     => '<strong>THE “HOW”: Frederick Samuels Apartments</strong><br/><em>New York City</em><br/>Showcasing LIIF’s continued commitment to the preservation of affordable housing is the renovation of Harlem\'s Frederick Samuels Apartments. This is an existing cluster of 664 affordable units to be preserved via the PACT program, New York City’s version of HUD’s Rental Assistance Demonstration (RAD) program. Genesis Companies and Lemor Development Group are using $1 million each from their LIIF Black Capital Developer Initiative (BDCI) financing to meet an anticipated 2025 completion date. This development exemplifies LIIF’s belief that healthy communities start with stable, quality affordable housing and early care and education: A co-located child care center will be rehabbed, as will small business spaces and a community center serving local families.',
+                    'spotlight'     => '<strong>THE “HOW”: Frederick Samuel Apartments</strong><br/><em>New York City</em><br/>Showcasing LIIF’s continued commitment to the preservation of affordable housing is the renovation of Harlem\'s Frederick Samuel Apartments. This is an existing cluster of 664 affordable units to be preserved via the PACT program, New York City’s version of HUD’s Rental Assistance Demonstration (RAD) program. Genesis Companies and Lemor Development Group are using $1 million each from their LIIF Black Capital Developer Initiative (BDCI) financing to meet an anticipated 2025 completion date. This development exemplifies LIIF’s belief that healthy communities start with stable, quality affordable housing and early care and education: A co-located child care center will be rehabbed, as will small business spaces and a community center serving local families.',
                 ],
                 [
                     'title'         => 'Early Care and Education',
                     'subtitle'      => 'LIIF Supporting the Sector to Set Up Parents and Children for Success',
+                    'subtitle_dt'   => 'LIIF Supporting the Sector to<br/>Set Up Parents and Children<br/>for Success',
                     'slug'          => 'children-success',
                     'color'   => 'blue',
                     'image'         => '/assets/images/article-bg-child-care.png',
@@ -268,7 +268,7 @@ return [
                         ],
                         [
                             'name' => 'Russell Bruemmer, Secretary',
-                            'title' => 'Retired Partner, Wilmer Cutler Pickering Hale and Dorr',
+                            'title' => 'Retired Partner, Wilmer Cutler Pickering<br/>Hale and Dorr',
                         ],
                     ],
                     'directors' => [    
@@ -278,15 +278,15 @@ return [
                         ],
                         [
                             'name' => 'Derek R.B. Douglas*',
-                            'title' => 'Vice President for Civic Engagement and External Affairs<br/>University of Chicago<br/>(*termed off in FY23)',
+                            'title' => 'Vice President for Civic Engagement<br/>and External Affairs<br/>University of Chicago<br/>(*termed off in FY23)',
                         ],
                         [
                             'name' => 'David Fleming, M.D.',
-                            'title' => 'Distinguished Fellow, Trust for America’s Health',
+                            'title' => 'Distinguished Fellow, Trust for<br/>America’s Health',
                         ],
                         [
                             'name' => 'Donna Gambrell',
-                            'title' => 'President & CEO, Appalachian Community Capital',
+                            'title' => 'President & CEO, Appalachian<br/>Community Capital',
                         ],
                         [
                             'name' => 'Calvin Gladney',
@@ -298,7 +298,7 @@ return [
                         ],
                         [
                             'name' => 'William C. Kelly, Jr.',
-                            'title' => 'Founder, Stewards of Affordable Housing for the Future',
+                            'title' => 'Founder, Stewards of Affordable Housing<br/>for the Future',
                         ],
                         [
                             'name' => 'Dionne Nelson',
@@ -310,17 +310,17 @@ return [
                         ],
                         [
                             'name' => 'Michael A. Solomon',
-                            'title' => 'Managing Director of Community Development, Charles Schwab Bank & Trust Services',
+                            'title' => 'Managing Director of Community<br/>Development, Charles Schwab<br/>Bank & Trust Services',
                         ],
                         [
                             'name' => 'Roy Swan',
-                            'title' => 'Head of Mission Investments, Ford Foundation<br/>(*departed)',
+                            'title' => 'Head of Mission Investments,<br/>Ford Foundation<br/>(*departed)',
                         ],
                     ],
                     'new_members' => [
                         [
                             'name' => 'Tawanna A. Black',
-                            'title' => 'Founder and CEO of Center for Economic Inclusion',
+                            'title' => 'Founder and CEO of Center for<br/>Economic Inclusion',
                         ],
                         [
                             'name' => 'Eileen Fitzgerald',
@@ -338,6 +338,8 @@ return [
                     'items' => [
                         [
                             'name' => 'Executive Committee',
+                            'col_start' => '1',
+                            'col_end' => '',
                             'items' => [
                                 [
                                     'name' => 'Rey Ocañas',
@@ -355,6 +357,8 @@ return [
                         ],
                         [
                             'name' => 'Finance Committee',
+                            'col_start' => '',
+                            'col_end' => '1',
                             'items' => [
                                 [
                                     'name' => 'Carol Naughton',
@@ -384,6 +388,8 @@ return [
                         ],
                         [
                             'name' => 'Ad Hoc Governance',
+                            'col_start' => '2',
+                            'col_end' => '',
                             'items' => [
                                 [
                                     'name' => 'Derek Douglas',
@@ -397,6 +403,8 @@ return [
                         ],
                         [
                             'name' => 'Lending Risk Committee',
+                            'col_start' => '',
+                            'col_end' => '2',
                             'items' => [
                                 [
                                     'name' => 'Bill Kelly',
@@ -426,6 +434,8 @@ return [
                         ],
                         [
                             'name' => 'Audit Committee',
+                            'col_start' => '3',
+                            'col_end' => '3',
                             'items' => [
                                 [
                                     'name' => 'Russ Bruemmer',
@@ -450,66 +460,104 @@ return [
                         [
                             'name' => 'Daniel A. Nissenbaum',
                             'title' => 'Chief Executive Officer',
+                            'col_start' => '1',
+                            'col_end' => '',
                         ],
                         [
                             'name' => 'Lucy Arellano Baglieri',
-                            'title' => 'Chief Strategy Officer and Executive Vice President',
+                            'title' => 'Chief Strategy Officer and Executive<br/>Vice President',
+                            'col_start' => '',
+                            'col_end' => '',
                         ],
                         [
                             'name' => 'Kimberly Latimer-Nelligan',
                             'title' => 'President',
+                            'col_start' => '',
+                            'col_end' => '',
                         ],
                         [
                             'name' => 'Panagiota Mahendru',
-                            'title' => 'Chief Financial Officer and Executive Vice President',
+                            'title' => 'Chief Financial Officer and Executive<br/>Vice President',
+                            'col_start' => '',
+                            'col_end' => '',
                         ],
                         [
                             'name' => 'Denise Noel',
-                            'title' => 'General Counsel and Executive Vice President',
+                            'title' => 'General Counsel and Executive<br/>Vice President',
+                            'col_start' => '',
+                            'col_end' => '1',
                         ],
                         [
                             'name' => 'Rachel Bluestein',
-                            'title' => 'Senior Vice President, Chief Programs Officer',
+                            'title' => 'Senior Vice President,<br/>Chief Programs Officer',
+                            'col_start' => '2',
+                            'col_end' => '',
                         ],
                         [
                             'name' => 'Susan Hyman',
-                            'title' => 'Senior Vice President, Chief Credit Officer',
+                            'title' => 'Senior Vice President,<br/>Chief Credit Officer',
+                            'col_start' => '',
+                            'col_end' => '',
                         ],
                         [
                             'name' => 'Stephanie McFadden',
-                            'title' => 'Senior Vice President, Chief Lending Officer',
+                            'title' => 'Senior Vice President,<br/>Chief Lending Officer',
+                            'col_start' => '',
+                            'col_end' => '',
                         ],
                         [
                             'name' => 'Walter Chen',
-                            'title' => 'Vice President & Associate General Counsel',
+                            'title' => 'Vice President & Associate<br/>General Counsel',
+                            'col_start' => '',
+                            'col_end' => '',
                         ],
                         [
                             'name' => 'Angie Garling',
-                            'title' => 'Vice President, Early Care and Education',
+                            'title' => 'Vice President, Early Care<br/>and Education',
+                            'col_start' => '',
+                            'col_end' => '',
                         ],
                         [
                             'name' => 'LaToya Kyle',
                             'title' => 'Vice President Southeast Region',
+                            'col_start' => '',
+                            'col_end' => '2',
                         ],
                         [
                             'name' => 'Maygen Moore',
-                            'title' => 'Vice President Affordable Housing and National Lending Initiatives',
+                            'title' => 'Vice President Affordable Housing<br/>and National Lending Initiatives',
+                            'col_start' => '3',
+                            'col_end' => '',
                         ],
                         [
                             'name' => 'Kirsten Shaw',
-                            'title' => 'Vice President, Northeast and Mid‐Atlantic Regions',
+                            'title' => 'Vice President, Northeast and<br/>Mid‐Atlantic Regions',
+                            'col_start' => '',
+                            'col_end' => '',
                         ],
                         [
                             'name' => 'Carolyn Smith',
-                            'title' => 'Vice President, Strategic Communications and Influence',
+                            'title' => 'Vice President, Strategic<br/>Communications and Influence',
+                            'col_start' => '',
+                            'col_end' => '',
                         ],
                         [
                             'name' => 'Jessica Standiford',
-                            'title' => 'Vice President, Development and Impact Investing',
+                            'title' => 'Vice President, Development and<br/>Impact Investing',
+                            'col_start' => '',
+                            'col_end' => '',
+                        ],
+                        [
+                            'name' => 'Pam Berkowitz',
+                            'title' => 'Market Director &mdash; Western Region',
+                            'col_start' => '',
+                            'col_end' => '',
                         ],
                         [
                             'name' => 'Eliisa Frazier',
-                            'title' => 'Director of Racial Equity and Impact Lending',
+                            'title' => 'Director of Racial Equity and<br/>Impact Lending',
+                            'col_start' => '',
+                            'col_end' => '3',
                         ],
                     ],
                 ],
