@@ -20,7 +20,7 @@
     @include('_partials.icons')
   </div>
   <div class="text-center text-sm py-4 px-8 bg-blue-dark text-white" role="contentinfo">
-    <span class="inline-block pr-1">Copyright © 2022 Low Income Investment Fund,</span>
+    <span class="inline-block pr-1">Copyright © 2023 Low Income Investment Fund,</span>
     <span class="inline-block">2022 Annual Impact Report</span>
   </div>
 </footer>

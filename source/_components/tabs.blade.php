@@ -59,7 +59,7 @@
             </ul>
           </div>
         @elseif (in_array($list->slug, ['committees']))
-          <p class="text-green-text mb-4 font-semibold">The following committees provide governance in support of our mission.</p>
+          <p class="text-green-text mb-4 font-semibold lg:col-span-2">The following committees provide governance in support of our mission.</p>
           @foreach ($list->items as $item)
             <div class="mb-4">
               <h3 class="mb-2 text-green-text">{{ $item['name'] }}</h3>

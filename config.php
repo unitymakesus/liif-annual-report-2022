@@ -112,7 +112,7 @@ return [
                     'excerpt_pos'   => 'left',
                     'link_url'      => 'https://www.liifund.org/justgoodcapital/2023/02/27/impact-led-lending-liifs-new-irp-framework-redefines-risk-centers-equity/',
                     'link_text'     => 'Read more',
-                    'spotlight'     => '<strong>THE “HOW”: The Villages of East River</strong><br/><em>Washington, D.C.</em><br/>Our Impact-Risk-Profitability (IRP) framework will guide us to deeper and more intentional impact. An example of a project with high impact priority elements is The Villages of East River. This 202-unit, scattered-site property comprising 16 buildings is located in the predominantly Black neighborhoods of Wards 7 and 8 of Southeast Washington, D.C. In our continuing efforts to create equity around housing, we provided a $6.4 million loan to NHT Communities, an SAHF member. The proceeds were used to refinance a maturing short-term acquisition loan, and LIIF assuming the first-lien position for the interim financing package that provided a bridge to a full recapitalization using tax-exempt bonds and 4% tax credits. Additionally, LIHTC was done through NAHT and our joint venture.',
+                    'spotlight'     => '<strong>THE “HOW”: The Villages of East River</strong><br/><em>Washington, D.C.</em><br/>Our Impact-Risk-Profitability (IRP) framework will guide us to deeper and more intentional impact. An example of a project with high-impact priority elements is The Villages of East River. This 202-unit, scattered-site property comprising 16 buildings is located in the predominantly Black neighborhoods of Wards 7 and 8 of Southeast Washington, D.C. In our continuing efforts to create equity around housing, we provided a $6.4 million loan to NHT Communities, an SAHF member. The proceeds were used to refinance a maturing short-term acquisition loan, and LIIF assuming the first-lien position for the interim financing package that provided a bridge to a full recapitalization using tax-exempt bonds and 4% tax credits. Additionally, LIHTC was done through NAHT and our joint venture.',
                 ],
                 [
                     'title'         => 'Affordable Housing',
@@ -198,7 +198,7 @@ return [
                         'Ford Foundation',
                         'Goldman Sachs',
                         'HSBC Bank USA',
-                        'JP Morgan Chase',
+                        'JPMorgan Chase & Co.',
                         'Kalliopeia Foundation',
                         'Kresge Foundation',
                         'Mercy Investment Services, Inc.',
@@ -278,7 +278,7 @@ return [
                         ],
                         [
                             'name' => 'Derek R.B. Douglas*',
-                            'title' => 'Vice President for Civic Engagement<br/>and External Affairs<br/>University of Chicago<br/>(*termed off in FY23)',
+                            'title' => 'Vice President for Civic Engagement<br/>and External Affairs<br/>University of Chicago<br/>(*termed off in FY22)',
                         ],
                         [
                             'name' => 'David Fleming, M.D.',
@@ -324,7 +324,7 @@ return [
                         ],
                         [
                             'name' => 'Eileen Fitzgerald',
-                            'title' => 'Former Head of Housing Affordability<br/>Philanthropy, Wells Fargo',
+                            'title' => 'Principal and Founder, Thrusight',
                         ],
                         [
                             'name' => 'Jessica Sager',
@@ -464,14 +464,14 @@ return [
                             'col_end' => '',
                         ],
                         [
-                            'name' => 'Lucy Arellano Baglieri',
-                            'title' => 'Chief Strategy Officer and Executive<br/>Vice President',
+                            'name' => 'Kimberly Latimer-Nelligan',
+                            'title' => 'President',
                             'col_start' => '',
                             'col_end' => '',
                         ],
                         [
-                            'name' => 'Kimberly Latimer-Nelligan',
-                            'title' => 'President',
+                            'name' => 'Lucy Arellano Baglieri',
+                            'title' => 'Chief Strategy Officer and Executive<br/>Vice President',
                             'col_start' => '',
                             'col_end' => '',
                         ],

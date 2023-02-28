@@ -51,6 +51,14 @@
 }
 
 .impact-article {
+  &:first-child {
+    @media only screen and (min-width: 1024px) {
+      .impact-article__text > div > p {
+        word-spacing: 2px;
+        padding-right: 12px;
+      }
+    }
+  }
   &__spotlight {
     max-width: 1200px;
     margin: 0 auto;
@@ -73,7 +81,7 @@
   }
 
   .spacer ~ article {
-    h2 {
+    h2, .h2 {
       display: flex;
       justify-content: center;
       align-items: flex-end;
