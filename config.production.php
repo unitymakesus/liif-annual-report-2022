@@ -2,5 +2,5 @@
 
 return [
     'production' => true,
-    'baseUrl' => 'https://liif-annual-report-2022.netlify.app/',
+    'baseUrl' => 'https://www.liifund.org/impact-report/2022/',
 ];
