@@ -29,3 +29,13 @@
   from {height: 0;}
   to {height: calc(100% + 10rem);}
 }
+
+@keyframes extendDownMed {
+  from {height: 0;}
+  to {height: calc(100% + 14rem);}
+}
+
+@keyframes extendDownLong {
+  from {height: 0;}
+  to {height: calc(100% + 18rem);}
+}

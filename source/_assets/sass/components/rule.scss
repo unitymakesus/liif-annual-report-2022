@@ -22,6 +22,24 @@
     @extend .green-rule;
   }
 
+  &__tabs-alt {
+    @extend .green-rule;
+
+    @media only screen and (min-width: 1024px) {
+      &::before {
+        height: calc(100% + 14rem);
+        top: -14rem;
+      }
+    }
+
+    @media only screen and (min-width: 1280px) {
+      &::before {
+        height: calc(100% + 18rem);
+        top: -18rem;
+      }
+    }
+  }
+
   &__hero {
     &::before {
       top: -7rem;
@@ -46,6 +64,25 @@
     &::before {
       animation: extendDown;
       animation-duration: .5s;
+    }
+  }
+
+  &__tabs-alt {
+    &.in-viewport {
+      &::before {
+        animation: extendDown;
+        animation-duration: .5s;
+
+        @media only screen and (min-width: 1024px) {
+          animation: extendDownMed;
+          animation-duration: .5s;
+        }
+
+        @media only screen and (min-width: 1280px) {
+          animation: extendDownLong;
+          animation-duration: .5s;
+        }
+      }
     }
   }
 }

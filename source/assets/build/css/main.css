@@ -102,6 +102,22 @@ footer .social-link {
     height: calc(100% + 10rem);
   }
 }
+@keyframes extendDownMed {
+  from {
+    height: 0;
+  }
+  to {
+    height: calc(100% + 14rem);
+  }
+}
+@keyframes extendDownLong {
+  from {
+    height: 0;
+  }
+  to {
+    height: calc(100% + 18rem);
+  }
+}
 .bg-cyan-card {
   color: #107E5F;
 }
@@ -164,12 +180,12 @@ body {
 }
 @media only screen and (min-width: 768px) {
   .articles {
-    padding-bottom: 80px;
+    padding-bottom: 50px;
   }
 }
 @media only screen and (min-width: 1024px) {
   .articles {
-    padding-bottom: 120px;
+    padding-bottom: 60px;
   }
   .articles .impact-article:not(:first-child) h2 {
     padding-top: 40px;
@@ -224,7 +240,7 @@ body {
     padding-bottom: 1rem;
   }
   .spacer:last-child {
-    padding-bottom: 3rem;
+    padding-bottom: 120px;
   }
   .spacer ~ article h2, .spacer ~ article .h2 {
     display: flex;
@@ -260,10 +276,10 @@ body {
   color: #FFFFFF;
 }
 
-.green-rule, .green-rule__hero, .green-rule__article, .green-rule__tabs {
+.green-rule, .green-rule__tabs-alt, .green-rule__hero, .green-rule__article, .green-rule__tabs {
   position: relative;
 }
-.green-rule::before, .green-rule__hero::before, .green-rule__article::before, .green-rule__tabs::before {
+.green-rule::before, .green-rule__tabs-alt::before, .green-rule__hero::before, .green-rule__article::before, .green-rule__tabs::before {
   content: "";
   position: absolute;
   left: -68px;
@@ -274,8 +290,20 @@ body {
   transition: opacity 0.5s, transform 0.5s;
 }
 @media only screen and (min-width: 1280px) {
-  .green-rule::before, .green-rule__hero::before, .green-rule__article::before, .green-rule__tabs::before {
+  .green-rule::before, .green-rule__tabs-alt::before, .green-rule__hero::before, .green-rule__article::before, .green-rule__tabs::before {
     left: 0;
+  }
+}
+@media only screen and (min-width: 1024px) {
+  .green-rule__tabs-alt::before {
+    height: calc(100% + 14rem);
+    top: -14rem;
+  }
+}
+@media only screen and (min-width: 1280px) {
+  .green-rule__tabs-alt::before {
+    height: calc(100% + 18rem);
+    top: -18rem;
   }
 }
 .green-rule__hero::before {
@@ -294,9 +322,25 @@ body {
     top: -12.75rem;
   }
 }
-.green-rule.in-viewport::before, .in-viewport.green-rule__hero::before, .in-viewport.green-rule__article::before, .in-viewport.green-rule__tabs::before {
+.green-rule.in-viewport::before, .in-viewport.green-rule__hero::before, .in-viewport.green-rule__article::before, .in-viewport.green-rule__tabs::before, .in-viewport.green-rule__tabs-alt::before {
   animation: extendDown;
   animation-duration: 0.5s;
+}
+.green-rule__tabs-alt.in-viewport::before {
+  animation: extendDown;
+  animation-duration: 0.5s;
+}
+@media only screen and (min-width: 1024px) {
+  .green-rule__tabs-alt.in-viewport::before {
+    animation: extendDownMed;
+    animation-duration: 0.5s;
+  }
+}
+@media only screen and (min-width: 1280px) {
+  .green-rule__tabs-alt.in-viewport::before {
+    animation: extendDownLong;
+    animation-duration: 0.5s;
+  }
 }
 
 table {
@@ -541,6 +585,16 @@ body a:hover, body a:focus {
 @media only screen and (min-width: 1024px) {
   .wrapper {
     padding: 100px 40px;
+  }
+}
+@media only screen and (min-width: 768px) {
+  .financials .wrapper {
+    padding: 50px 40px 80px;
+  }
+}
+@media only screen and (min-width: 1024px) {
+  .financials .wrapper {
+    padding: 60px 40px 100px;
   }
 }
 
