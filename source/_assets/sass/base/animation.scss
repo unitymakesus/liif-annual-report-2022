@@ -1,0 +1,41 @@
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translate3d(0, 60px, 0);
+  }
+
+  to {
+    opacity: 1;
+    transform: translate3d(0, 0, 0);
+  }
+}
+
+@keyframes fadeInUpHero {
+  from {
+    transform: translate3d(0, 60px, 0);
+  }
+
+  to {
+    transform: translate3d(0, 2rem, 0);
+  }
+}
+
+@keyframes extend {
+  from {width: 0;}
+  to {width: 26%;}
+}
+
+@keyframes extendDown {
+  from {height: 0;}
+  to {height: calc(100% + 10rem);}
+}
+
+@keyframes extendDownMed {
+  from {height: 0;}
+  to {height: calc(100% + 14rem);}
+}
+
+@keyframes extendDownLong {
+  from {height: 0;}
+  to {height: calc(100% + 18rem);}
+}

@@ -1,0 +1,36 @@
+.financials {
+  button {
+    &[role=tab]:not(button[aria-selected=true]) {
+      &:hover,
+      &:focus {
+        background-color: $blue-hover;
+        color: $green-lime;
+        text-decoration: underline;
+      }
+    }
+    &[aria-selected=true] {
+      outline-color: $green-button !important;
+      background-color: $green-button;
+      color: $blue-dark;
+    }
+  }
+}
+
+.supporters {
+  button {
+    color: $green-darker;
+
+    &[role=tab]:not(button[aria-selected=true]) {
+      &:hover,
+      &:focus {
+        background-color: $gray-green;
+        color: $green-darker;
+      }
+    }
+    
+    &[aria-selected=true] {
+      background-color: $green-darker;
+      color: $white;
+    }
+  }
+}

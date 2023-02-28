@@ -1,0 +1,88 @@
+.green-rule {
+  position: relative;
+
+  &::before {
+    content: '';
+    position: absolute;
+    left: -68px;
+    top: -10rem;
+    background-color: $green-lime-light;
+    width: 3rem;
+    height: calc(100% + 10rem);
+    transition: opacity .5s, transform .5s;
+
+    @media only screen and (min-width: 1280px) {
+      left: 0;
+    }
+  }
+
+  &__hero,
+  &__article,
+  &__tabs {
+    @extend .green-rule;
+  }
+
+  &__tabs-alt {
+    @extend .green-rule;
+
+    @media only screen and (min-width: 1024px) {
+      &::before {
+        height: calc(100% + 14rem);
+        top: -14rem;
+      }
+    }
+
+    @media only screen and (min-width: 1280px) {
+      &::before {
+        height: calc(100% + 18rem);
+        top: -18rem;
+      }
+    }
+  }
+
+  &__hero {
+    &::before {
+      top: -7rem;
+    }
+
+    @media only screen and (min-width: 640px) {
+      &::before {
+        top: -10.25rem;
+      }
+    }
+
+    @media only screen and (min-width: 1024px) {
+      height: 2rem;
+
+      &::before {
+        top: -12.75rem;
+      }
+    }
+  }
+
+  &.in-viewport {
+    &::before {
+      animation: extendDown;
+      animation-duration: .5s;
+    }
+  }
+
+  &__tabs-alt {
+    &.in-viewport {
+      &::before {
+        animation: extendDown;
+        animation-duration: .5s;
+
+        @media only screen and (min-width: 1024px) {
+          animation: extendDownMed;
+          animation-duration: .5s;
+        }
+
+        @media only screen and (min-width: 1280px) {
+          animation: extendDownLong;
+          animation-duration: .5s;
+        }
+      }
+    }
+  }
+}

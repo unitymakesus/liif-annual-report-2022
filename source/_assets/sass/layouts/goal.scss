@@ -1,0 +1,74 @@
+.progress-bar {
+  background-color: $blue;
+
+  &__overlay {
+    background-color: $blue-dark;
+
+    &.in-viewport {
+      width: 26%;
+      animation-name: extend;
+      animation-duration: 1.5s;
+      animation-iteration-count: 1;
+    }
+  }
+}
+
+.goal {
+  font-size: clamp(3.5rem, 18vw, 6rem);
+  line-height: 1;
+
+  .prefix {
+    padding-top: 0.25em;
+    font-size: 0.5em;
+  }
+
+  .unit {
+    align-self: flex-end;
+    padding-bottom: 1.5%;
+    font-size: 0.75em;
+  }
+
+  &.goal-total {
+    font-size: clamp(4.5rem, 18vw, 8rem);
+
+    .unit {
+      padding-bottom: 0.5%;
+
+      @media only screen and (min-width: 768px) {
+        padding-bottom: 1.5%;
+      }
+    }
+  }
+
+  @media only screen and (min-width: 1024px) {
+    font-size: clamp(3.5rem, 6vw, 6rem);
+  }
+}
+
+.card {
+  &__body {
+    img {
+      object-position: top center;
+      mix-blend-mode: multiply;
+    }
+  }
+
+  &__body,
+  &__note {
+    @media only screen and (min-width: 640px) {
+      &.in-viewport {
+        animation-name: fadeInUp;
+        animation-duration: 1s;
+        animation-iteration-count: 1;
+      }
+    }
+  }
+
+  @media only screen and (min-width: 1024px) {
+    &:nth-child(even) {
+      .card__body {
+        margin-top: 4rem;
+      }
+    }
+  }
+}

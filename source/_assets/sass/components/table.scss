@@ -1,0 +1,93 @@
+table {
+  border-collapse: collapse;
+
+  tbody {
+    tr:not(:last-child) {
+      th {
+        border: 2px solid $green-button;
+      }
+
+      td {
+        border: 2px solid $green-button;
+      }
+    }
+
+    tr {
+      th, td {
+        padding: 0.25rem 0.5rem;
+        width: 50%;
+      }
+
+      th {
+        width: clamp(200px, 35vw, 600px);
+
+        &:first-child {
+          text-align: left;
+        }
+      }
+
+      td {
+        text-align: right;
+      }
+    }
+  }
+
+  @media only screen and (max-width: 767px) {
+    thead th[scope="col"]:not(.active),
+    tbody td:not(.active) {
+      display: none;
+    }
+  }
+
+  @media only screen and (min-width: 768px) {
+    tr {
+      th, td {
+        padding: 0.5rem 1rem;
+        
+        &:first-child {
+          width: 40%;
+        }
+
+        &:not(:first-child) {
+          width: 20%;
+        }
+      }
+    }
+  }
+}
+
+nav.table-years {
+  button {
+    text-decoration: 1px underline;
+
+    &:hover,
+    &.active {
+      text-decoration: 2px underline;
+    }
+  }
+}
+
+div[id=tabpanel-board-of-directors] {
+  & > div {
+    padding-top: 1rem;
+    border-top: 1px solid $green-darker;
+  }
+}
+
+// div[id=tabpanel-committees]:not([hidden]) {
+  // grid-gap: 0 6rem;
+  
+  // & > div > div {
+  //   padding-top: 1rem;
+  //   border-top: 1px solid $green-darker;
+  // }
+
+  // @media only screen and (min-width: 768px) {
+  //   display: grid;
+  //   grid-template-columns: repeat(2, 1fr);
+  // }
+
+  // @media only screen and (min-width: 1024px) {
+  //   grid-template-columns: repeat(3, 1fr);
+  // }
+// }

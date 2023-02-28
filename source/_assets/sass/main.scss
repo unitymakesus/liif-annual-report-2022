@@ -1,0 +1,118 @@
+// Simple Animation Library
+@import 'sal.js/dist/sal.css';
+
+// Theme styles
+@import 'base/a11y';
+@import 'base/animation';
+@import 'base/colors';
+@import 'base/type';
+@import 'components/article';
+@import 'components/button';
+@import 'components/rule';
+@import 'components/table';
+@import 'layouts/goal';
+@import 'layouts/hero';
+@import 'layouts/leadership';
+
+body {
+  a {
+    text-decoration: underline;
+    &:hover,
+    &:focus {
+      text-decoration: underline 2px;
+    }
+  }
+}
+
+.wrapper {
+  width: 100%;
+  max-width: 1280px;
+  margin: 0 auto;
+  padding: 40px;
+
+  .leadership & {
+    padding-top: 40px;
+  }
+
+  &-wide {
+    @media only screen and (min-width: 1280px) {
+      max-width: 1500px;
+
+      h2:not(.h2-wide), .h2 {
+        max-width: 1200px;
+        margin-left: auto;
+        margin-right: auto;
+      }
+    }
+  }
+
+  @media only screen and (min-width: 768px) {
+    padding: 80px 40px;
+  }
+
+  @media only screen and (min-width: 1024px) {
+    padding: 100px 40px;
+  }
+
+  .financials & {
+    @media only screen and (min-width: 768px) {
+      padding: 50px 40px 80px;
+    }
+
+    @media only screen and (min-width: 1024px) {
+      padding: 60px 40px 100px;
+    }
+  }
+}
+
+@media only screen and (max-width: 639px) {
+  .header .social-icons {
+    display: none;
+  }
+}
+
+.social-link {
+  &:hover,
+  &:focus {
+    box-shadow: 0px 3px 5px #00000069;
+    transition: all 0.12s ease-in-out;
+  }
+
+  header & {
+    fill: $blue;
+
+    &:hover,
+    &:focus {
+      fill: $green;
+    }
+  }
+
+  footer & {
+    fill: $white;
+
+    &:hover,
+    &:focus {
+      fill: $green-lime;
+    }
+  }
+}
+
+.right {
+  & > div  {
+    justify-content: flex-end;
+  }
+}
+
+label[for=mce-email] {
+  text-align: left;
+}
+
+.footer-form {
+  label {
+    color: #FFF;
+  }
+  input {
+    color: #000;
+    outline-color: #FFF !important;
+  }
+}
