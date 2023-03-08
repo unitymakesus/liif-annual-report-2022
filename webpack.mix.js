@@ -4,7 +4,11 @@ require('laravel-mix-jigsaw');
 mix.disableSuccessNotifications();
 mix.setPublicPath('source/assets/build');
 
-mix.jigsaw()
+mix.jigsaw({
+        watch: [
+          'config.php', 'source/**/*.md', 'source/**/*.php', 'source/**/*.scss'
+        ],
+    })
     .js('source/_assets/js/main.js', 'js')
     .css('source/_assets/css/main.css', 'css', [
         require('postcss-import'),
@@ -13,5 +17,9 @@ mix.jigsaw()
     .sass('source/_assets/sass/main.scss', 'css/main.css')
     .options({
         processCssUrls: false,
+        postCss: [
+            require('tailwindcss'),
+        ],
     })
+    .sourceMaps()
     .version();
