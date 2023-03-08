@@ -62,16 +62,20 @@
 
   &.in-viewport {
     &::before {
-      animation: extendDown;
-      animation-duration: .5s;
+      @media only screen and (min-width: 640px) {
+        animation: extendDown;
+        animation-duration: .5s;
+      }
     }
   }
 
   &__tabs-alt {
     &.in-viewport {
       &::before {
-        animation: extendDown;
-        animation-duration: .5s;
+        @media only screen and (min-width: 640px) {
+          animation: extendDown;
+          animation-duration: .5s;
+        }
 
         @media only screen and (min-width: 1024px) {
           animation: extendDownMed;
